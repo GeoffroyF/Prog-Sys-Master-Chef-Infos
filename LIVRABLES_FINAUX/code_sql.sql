@@ -41,14 +41,14 @@ CREATE TABLE TYPE_RECETTE(
 
 
 /*------------------------------------------------------------
--- Table: TABLE
+-- Table: MA_TABLE
 ------------------------------------------------------------*/
-CREATE TABLE TABLE(
+CREATE TABLE MA_TABLE(
 	id          INT IDENTITY (1,1) NOT NULL ,
 	nb_chaise   INT  NOT NULL ,
 	pain        bit  NOT NULL ,
 	bouteille   bit  NOT NULL  ,
-	CONSTRAINT TABLE_PK PRIMARY KEY (id)
+	CONSTRAINT MA_TABLE_PK PRIMARY KEY (id)
 );
 
 
@@ -56,16 +56,16 @@ CREATE TABLE TABLE(
 -- Table: COUVERTS
 ------------------------------------------------------------*/
 CREATE TABLE COUVERTS(
-	id          INT IDENTITY (1,1) NOT NULL ,
-	nom         VARCHAR (50) NOT NULL ,
-	nb_total    INT  NOT NULL ,
-	nb_propre   INT  NOT NULL ,
-	nb_sale     INT  NOT NULL ,
-	type        bit  NOT NULL ,
-	id_TABLE    INT    ,
+	id            INT IDENTITY (1,1) NOT NULL ,
+	nom           VARCHAR (50) NOT NULL ,
+	nb_total      INT  NOT NULL ,
+	nb_propre     INT  NOT NULL ,
+	nb_sale       INT  NOT NULL ,
+	type          bit  NOT NULL ,
+	id_MA_TABLE   INT    ,
 	CONSTRAINT COUVERTS_PK PRIMARY KEY (id)
 
-	,CONSTRAINT COUVERTS_TABLE_FK FOREIGN KEY (id_TABLE) REFERENCES TABLE(id)
+	,CONSTRAINT COUVERTS_MA_TABLE_FK FOREIGN KEY (id_MA_TABLE) REFERENCES MA_TABLE(id)
 );
 
 
@@ -102,6 +102,21 @@ CREATE TABLE RECETTE(
 
 
 /*------------------------------------------------------------
+-- Table: RESERVATION
+------------------------------------------------------------*/
+CREATE TABLE RESERVATION(
+	id            INT IDENTITY (1,1) NOT NULL ,
+	date          DATETIME NOT NULL ,
+	temps         bit  NOT NULL ,
+	id_MA_TABLE   INT  NOT NULL  ,
+	CONSTRAINT RESERVATION_PK PRIMARY KEY (id)
+
+	,CONSTRAINT RESERVATION_MA_TABLE_FK FOREIGN KEY (id_MA_TABLE) REFERENCES MA_TABLE(id)
+	,CONSTRAINT RESERVATION_MA_TABLE_AK UNIQUE (id_MA_TABLE)
+);
+
+
+/*------------------------------------------------------------
 -- Table: Composer
 ------------------------------------------------------------*/
 CREATE TABLE Composer(
@@ -120,12 +135,14 @@ CREATE TABLE Composer(
 ------------------------------------------------------------*/
 CREATE TABLE COMMANDER(
 	id              INT  NOT NULL ,
-	id_TABLE        INT  NOT NULL ,
+	id_MA_TABLE     INT  NOT NULL ,
 	id_INGREDIENT   INT  NOT NULL  ,
-	CONSTRAINT COMMANDER_PK PRIMARY KEY (id,id_TABLE,id_INGREDIENT)
+	CONSTRAINT COMMANDER_PK PRIMARY KEY (id,id_MA_TABLE,id_INGREDIENT)
 
 	,CONSTRAINT COMMANDER_RECETTE_FK FOREIGN KEY (id) REFERENCES RECETTE(id)
-	,CONSTRAINT COMMANDER_TABLE0_FK FOREIGN KEY (id_TABLE) REFERENCES TABLE(id)
+	,CONSTRAINT COMMANDER_MA_TABLE0_FK FOREIGN KEY (id_MA_TABLE) REFERENCES MA_TABLE(id)
 	,CONSTRAINT COMMANDER_INGREDIENT1_FK FOREIGN KEY (id_INGREDIENT) REFERENCES INGREDIENT(id)
 );
+
+
 
