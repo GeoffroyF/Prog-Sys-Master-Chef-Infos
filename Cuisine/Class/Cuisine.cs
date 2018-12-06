@@ -4,28 +4,24 @@ using System.Linq;
 using System.Text;
 
 public class Cuisine {
-    private Armoire Armoire;
+    private static Armoire Armoire;
 
     private static Cuisine Instance;
 
-    private Stock Stock;
+    private static Stock Stock;
 
-    private Machines[] Machines;
+    private static Machines[] Machines;
 
-    private Ustenciles Ustenciles;
+    private static Ustenciles Ustenciles;
 
-    private PassePlat PassePlat;
-
-
-
-
+    private static PassePlat PassePlat;
 
     /// <summary>
     /// Retourne l'amoire
     /// </summary>
     /// <returns></returns>
-    public Armoire GetArmoire() {
-        // TODO implement here
+    public static Armoire GetArmoire() {
+        return Armoire;
     }
 
     /// <summary>
@@ -33,7 +29,7 @@ public class Cuisine {
     /// </summary>
     /// <returns></returns>
     public Cuisine GetInstance() {
-        // TODO implement here
+        return Instance;
     }
 
 
@@ -42,7 +38,7 @@ public class Cuisine {
     /// </summary>
     /// <returns></returns>
     public Stock GetStock() {
-        // TODO implement here
+        return Stock;
     }
 
     /// <summary>
@@ -50,7 +46,7 @@ public class Cuisine {
     /// </summary>
     /// <returns></returns>
     public Machines[] GetMachines() {
-        // TODO implement here
+        return Machines;
     }
 
     /// <summary>
@@ -58,7 +54,7 @@ public class Cuisine {
     /// </summary>
     /// <returns></returns>
     public Ustenciles GetUstenciles() {
-        // TODO implement here
+        return Ustenciles;
     }
 
 
@@ -67,7 +63,7 @@ public class Cuisine {
     /// </summary>
     /// <returns></returns>
     public PassePlat GetPassePlat() {
-        // TODO implement here
+        return PassePlat;
     }
 
 }

@@ -6,91 +6,116 @@ using System.Text;
 
 public class Armoire {
 
-    public Armoire() {
-    }
+    private static int Assiettes;
 
-    private int Assiettes;
+    private static int Couverts;
 
-    private int Couverts;
+    private static int Verres;
 
-    private int Verres;
+    private static int JeuCafe;
 
-    private int JeuCafe;
+    private static int Serviettes;
 
-    private int Serviettes;
-
-    private int Napes;
+    private static int Napes;
 
     private static Armoire Instance;
 
 
-    public void GetAssiettes() {
+    /// <summary>
+    /// Retourne le nombre d'assietes
+    /// </summary>
+    public static int GetAssiettes() {
+        // TODO implement here
+    }
+
+    /// <summary>
+    /// Met a jour le nombre d'assietes
+    /// @param int
+    /// </summary>
+    public static void SetAssiettes(int nb) {
+        // TODO implement here
+    }
+
+    /// <summary>
+    /// Retourne le nombre de Couverts
+    /// </summary>
+    public static int GetCouverts() {
+        // TODO implement here
+    }
+
+    /// <summary>
+    /// Met a jours le nombre de couverts
+    /// @param int
+    /// </summary>
+    public static void SetCouverts(int nb) {
+        // TODO implement here
+    }
+
+    /// <summary>
+    /// Retourne le nombre de verres
+    /// </summary>
+    public static int GetVerres() {
         // TODO implement here
     }
 
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetAssiettes(void int) {
+    public static void SetVerres(int nb) {
         // TODO implement here
     }
 
-    public void GetCouverts() {
+
+    /// <summary>
+    /// Retourne le nombre de jeu de café
+    /// </summary>
+    public static int GetJeuCafe() {
         // TODO implement here
     }
 
     /// <summary>
+    /// Modifie le nombre de jeu de café
     /// @param int
     /// </summary>
-    public void SetCouverts(void int) {
-        // TODO implement here
-    }
-
-    public void GetVerres() {
+    public static void SetJeuCafe(int nb) {
         // TODO implement here
     }
 
     /// <summary>
-    /// @param int
+    /// Retourne le nombre de serviettes
     /// </summary>
-    public void SetVerres(void int) {
-        // TODO implement here
-    }
-
-    public void GetJeuCafe() {
+    public static int GetServiettes() {
         // TODO implement here
     }
 
     /// <summary>
+    /// Met a jour le nombre de serviettes
     /// @param int
     /// </summary>
-    public void SetJeuCafe(void int) {
-        // TODO implement here
-    }
-
-    public void GetServiettes() {
+    public static void SetServiettes(int nb) {
         // TODO implement here
     }
 
     /// <summary>
-    /// @param int
+    /// Retoutne le nombre de napes
     /// </summary>
-    public void SetServiettes(void int) {
-        // TODO implement here
-    }
-
-    public void GetNapes() {
+    public static int GetNapes() {
         // TODO implement here
     }
 
     /// <summary>
+    /// Met a jout le nombre de napes
     /// @param int
     /// </summary>
-    public void SetNapes(void int) {
+    public static void SetNapes(int nb) {
         // TODO implement here
     }
 
-    public void GetInstance() {
+    /// <summary>
+    /// Singleton
+    /// Retourne l'unique instance
+    /// </summary>
+    public static Armoire GetInstance() {
         // TODO implement here
     }
 
