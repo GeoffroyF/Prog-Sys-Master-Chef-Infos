@@ -7,9 +7,18 @@ using System.Text;
 
 public class Salle : PresentoireSalle {
 
-    public Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle) {
-        //initialisations par défauts
+    private Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle) {
     }
+
+
+    public static Salle Instance
+    {
+        get
+        {
+            return Instance;
+        }
+    }
+
 
     private Carre CarreUn;
 
@@ -19,7 +28,7 @@ public class Salle : PresentoireSalle {
 
     private CommisSalle Commis;
 
-    private static Salle Instance;
+    
 
     private PresentoireSalle PresentoireSalle;
 
@@ -28,7 +37,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
 
     public Carre GetCarreUn() {
-        return Instance.CarreUn;
+        return this.CarreUn;
     }
 
     /// <summary>
@@ -36,7 +45,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
 
     public Carre GetCarreDeux() {
-        return Instance.CarreDeux;
+        return this.CarreDeux;
     }
 
     /// <summary>
@@ -44,7 +53,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
     
     public MaitreHotel GetMaitreHotel() {
-        return Instance.MaitreHotel;
+        return this.MaitreHotel;
     }
 
     /// <summary>
@@ -52,7 +61,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
 
     public CommisSalle GetCommis() {
-        return Instance.Commis;
+        return this.Commis;
     }
 
     /// <summary>

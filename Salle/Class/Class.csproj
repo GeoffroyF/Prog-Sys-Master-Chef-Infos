@@ -45,6 +45,7 @@
     <Compile Include="ChefRang.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="CommisSalle.cs" />
+    <Compile Include="Strategy.cs" />
     <Compile Include="MaitreHotel.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="PersonnelCuisine.cs" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Table : Strategy {
+public class Table {
 
     public Table(int NombreChaises, int NombrePersonnes, Boolean IsReserved, Boolean HasPain, Boolean HasEau) {
         NombreChaises = 4;
@@ -24,8 +24,7 @@ public class Table : Strategy {
 
     private Boolean HasEau;
 
-    //private Plat[] Plats;
-    //lie a la solution Cuisine
+    private string[] Plats;
 
     /// <summary>
     /// 
@@ -91,16 +90,16 @@ public class Table : Strategy {
         this.HasEau = State;
     }
 
-    /*
-    public void GetPlats() {
-        // TODO implement here
+    
+    public String[] GetPlats() {
+        return this.Plats;
     }
 
     /// <summary>
     /// @param Plats
     /// </summary>
-    public void SetPlats(void Plats) {
-        // TODO implement here
-    }*/
+    public void SetPlats(String[] Plats) {
+        this.Plats = Plats;
+    }
 
 }
