@@ -35,7 +35,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetCasseroles(void int) {
+    public void SetCasseroles(int nb) {
         // TODO implement here
     }
 
@@ -46,7 +46,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetPoels(void int) {
+    public void SetPoels(int nb) {
         // TODO implement here
     }
 
@@ -57,7 +57,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetCuilliereBois(void int) {
+    public void SetCuilliereBois(int nb) {
         // TODO implement here
     }
 
@@ -68,7 +68,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetBolSalades(void int) {
+    public void SetBolSalades(int nb) {
         // TODO implement here
     }
 
@@ -79,7 +79,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetPresseAgrumes(void int) {
+    public void SetPresseAgrumes(int nb) {
         // TODO implement here
     }
 
@@ -90,7 +90,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetTamis(void int) {
+    public void SetTamis(int nb) {
         // TODO implement here
     }
 
@@ -101,7 +101,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetEntoinnoirs(void int) {
+    public void SetEntoinnoirs(int nb) {
         // TODO implement here
     }
 
@@ -112,7 +112,7 @@ public class Ustenciles {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetCouteaux(void int) {
+    public void SetCouteaux(int nb) {
         // TODO implement here
     }
 

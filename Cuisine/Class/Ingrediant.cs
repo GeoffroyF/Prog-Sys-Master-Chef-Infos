@@ -9,13 +9,13 @@ public class Ingrediant {
     public Ingrediant() {
     }
 
-    private void Nom;
+    private String Nom;
 
-    private void Quantite;
+    private int Quantite;
 
-    private void DatePeramption;
+    private DateTime DatePeramption;
 
-    public void ZoneStock;
+    public String ZoneStock;
 
 
 
@@ -30,7 +30,7 @@ public class Ingrediant {
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetQuantite(void int) {
+    public void SetQuantite(int nb) {
         // TODO implement here
     }
 

@@ -11,7 +11,8 @@ public class PassePlat : Sujet {
 
     private static PassePlat Instance;
 
-    private void BufferPlatReady;
+    // TODO A faire
+    private int BufferPlatReady;
 
 
     public void GetInstance() {

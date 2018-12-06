@@ -9,13 +9,13 @@ public class Machines {
     public Machines() {
     }
 
-    private void Temps;
+    private int Temps;
 
-    private void Capacite;
+    private int Capacite;
 
-    private void Proprio;
+    private PersonnelCuisine Proprio;
 
-    private void Nom;
+    private String Nom;
 
 
     public void Utilise() {

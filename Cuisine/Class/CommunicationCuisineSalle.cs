@@ -18,7 +18,7 @@ public class CommunicationCuisineSalle : Observer {
     /// <summary>
     /// @param Plat
     /// </summary>
-    public void AddPlatToPassePlat(void Plat) {
+    public void AddPlatToPassePlat(Plat Plat) {
         // TODO implement here
     }
 
@@ -26,7 +26,7 @@ public class CommunicationCuisineSalle : Observer {
     /// @param String 
     /// @param int
     /// </summary>
-    public void EnvoiePropre(void String, void int) {
+    public void EnvoiePropre(String type, int nb) {
         // TODO implement here
     }
 

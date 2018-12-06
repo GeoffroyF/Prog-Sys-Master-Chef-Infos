@@ -9,9 +9,10 @@ public class Plat {
     public Plat() {
     }
 
-    private boolean sucre;
+    private bool sucre;
 
-    private Array<Ingrediant, Integer> Ingrediants;
+    // TODO
+    //private Array<Ingrediant, Int> Ingrediants;
 
     private int TempsCuisson;
 

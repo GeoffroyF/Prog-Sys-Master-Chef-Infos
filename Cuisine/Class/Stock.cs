@@ -9,11 +9,11 @@ public class Stock {
     public Stock() {
     }
 
-    private void ZoneDanree;
+    private Ingrediant[] ZoneDanree;
 
-    private void ChambreFroide;
+    private Ingrediant[] ChambreFroide;
 
-    private void Congelo;
+    private Ingrediant[] Congelo;
 
     private static Stock Instance;
 
