@@ -51,6 +51,7 @@
     <Compile Include="PresentoireSalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rang.cs" />
+    <Compile Include="Reservation.cs" />
     <Compile Include="Salle.cs" />
     <Compile Include="Serveur.cs" />
     <Compile Include="Sujet.cs" />

@@ -6,7 +6,8 @@ using System.Text;
 
 public class Rang {
 
-    public Rang() {
+    public Rang(Serveur Serveur, ChefRang ChefRang, Table[] ListeTables) {
+        //initialisations par défauts
     }
 
     private Serveur Serveur;
@@ -15,18 +16,28 @@ public class Rang {
 
     private Table[] ListeTables;
 
+    /// <summary>
+    /// Renvoie le Serveur du rang, de type Serveur
+    /// </summary>
 
-
-    public void GetServeur() {
-        // TODO implement here
+    public Serveur GetServeur() {
+        return this.Serveur;
     }
 
-    public void GetChefRang() {
-        // TODO implement here
+    /// <summary>
+    /// Renvoie le Chef de Rang du Rang, de type ChefRang
+    /// </summary>
+
+    public ChefRang GetChefRang() {
+        return this.ChefRang;
     }
 
-    public void GetListeTables() {
-        // TODO implement here
+    /// <summary>
+    /// Renvoie la liste des tables du rang
+    /// </summary>
+
+    public Table GetListeTables() {
+        return this.ListeTables[0];
     }
 
 }

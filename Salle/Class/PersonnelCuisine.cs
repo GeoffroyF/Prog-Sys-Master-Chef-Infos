@@ -6,32 +6,46 @@ using System.Text;
 
 public class PersonnelCuisine {
 
-    public PersonnelCuisine() {
+    public PersonnelCuisine(String Nom , String Prenom) {
+        IsBusy = false;
     }
 
     private String Nom;
 
     private String Prenom;
 
-    private boolean isBusy;
+    private Boolean IsBusy;
 
-    public void GetNom() {
-        // TODO implement here
-    }
-
-    public void GetPrenom() {
-        // TODO implement here
-    }
-
-    public void GetIsBusy() {
-        // TODO implement here
+    /// <summary>
+    /// 
+    /// </summary>
+    
+    public String GetNom() {
+        return this.Nom;
     }
 
     /// <summary>
-    /// @param boolean
+    /// 
     /// </summary>
-    public void SetIsBusy(void boolean) {
-        // TODO implement here
+    
+    public String GetPrenom() {
+        return this.Prenom;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+ 
+    public Boolean GetIsBusy() {
+        return this.IsBusy;
+    }
+
+    /// <summary>
+    /// @param Boolean
+    /// </summary>
+    
+    public void SetIsBusy(Boolean State) {
+        this.IsBusy = State;
     }
 
 }

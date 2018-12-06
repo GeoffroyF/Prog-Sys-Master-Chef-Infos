@@ -13,7 +13,7 @@ public class Commande {
 
     private String Plat;
 
-    private boolean EnCours;
+    private Boolean EnCours;
 
     public void GetTable() {
         // TODO implement here
@@ -26,7 +26,7 @@ public class Commande {
     /// <summary>
     /// @param Plat
     /// </summary>
-    public void SetPlats(void Plat) {
+    public void SetPlats(string Plat) {
         // TODO implement here
     }
 

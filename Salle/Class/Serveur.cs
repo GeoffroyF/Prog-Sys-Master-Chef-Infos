@@ -6,8 +6,12 @@ using System.Text;
 
 public class Serveur : PersonnelCuisine {
 
-    public Serveur() {
+    public Serveur(String Nom, String Prenom, Rang Rang) : base (Nom, Prenom) {
     }
+
+    private String Nom;
+
+    private String Prenom;
 
     private Rang Rang;
 
@@ -18,21 +22,21 @@ public class Serveur : PersonnelCuisine {
     /// <summary>
     /// @param Commande
     /// </summary>
-    public void AmenerSucre(void Commande) {
+    public void AmenerSucre(Commande Commande) {
         // TODO implement here
     }
 
     /// <summary>
     /// @param Commande
     /// </summary>
-    public void AmenerSale(void Commande) {
+    public void AmenerSale(Commande Commande) {
         // TODO implement here
     }
 
     /// <summary>
     /// @param Commande
     /// </summary>
-    public void Addition(void Commande) {
+    public void Addition(Commande Commande) {
         // TODO implement here
     }
 

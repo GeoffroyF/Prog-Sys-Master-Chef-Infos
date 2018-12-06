@@ -6,77 +6,92 @@ using System.Text;
 
 public class Table : Strategy {
 
-    public Table() {
+    public Table(int NombreChaises, int NombrePersonnes, Boolean IsReserved, Boolean HasPain, Boolean HasEau) {
+        NombreChaises = 4;
+        NombrePersonnes = 0;
+        IsReserved = false;
+        HasPain = false;
+        HasEau = false;
     }
 
     private int NombreChaises;
 
     private int NombrePersonnes;
 
-    private boolean IsReserved;
+    private Boolean IsReserved;
 
-    private boolean HasPain;
+    private Boolean HasPain;
 
-    private boolean HasEau;
+    private Boolean HasEau;
 
-    private Plat[] Plats;
+    //private Plat[] Plats;
+    //lie a la solution Cuisine
 
-
-    public void GetNombreChaises() {
-        // TODO implement here
+    /// <summary>
+    /// 
+    /// </summary>
+    public int GetNombreChaises() {
+        return this.NombreChaises;
     }
 
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetNombreChaises(void int) {
-        // TODO implement here
+    public void SetNombreChaises(int Nbchaises) {
+        this.NombreChaises = Nbchaises;
     }
 
-    public void GetNombrePersonnes() {
-        // TODO implement here
+    /// <summary>
+    /// 
+    /// </summary>    
+    public int GetNombrePersonnes() {
+        return this.NombrePersonnes;
     }
 
     /// <summary>
     /// @param int
-    /// </summary>
-    public void SetNombrePersonnes(void int) {
-        // TODO implement here
+    /// </summary>   
+    public void SetNombrePersonnes(int NbPersonnes) {
+        this.NombrePersonnes = NbPersonnes;
     }
 
-    public void GetIsReserved() {
-        // TODO implement here
+    /// <summary>
+    /// 
+    /// </summary>
+    public Boolean GetIsReserved() {
+        return this.IsReserved;
     }
 
     /// <summary>
     /// @param boolean
     /// </summary>
-    public void SetIsReserved(void boolean) {
-        // TODO implement here
+    public void SetIsReserved(Boolean State) {
+        this.IsReserved =  State;
     }
 
-    public void GetHasPain() {
-        // TODO implement here
-    }
-
-    /// <summary>
-    /// @param boolean
-    /// </summary>
-    public void SetHasPain(void boolean) {
-        // TODO implement here
-    }
-
-    public void GetHasEau() {
-        // TODO implement here
+    public Boolean GetHasPain() {
+        return this.HasPain;
     }
 
     /// <summary>
     /// @param boolean
     /// </summary>
-    public void SetHasEau(void boolean) {
-        // TODO implement here
+    public void SetHasPain(Boolean State) {
+        this.HasPain = State;
     }
 
+    public Boolean GetHasEau() {
+        return HasEau;
+    }
+
+    /// <summary>
+    /// @param boolean
+    /// </summary>
+    public void SetHasEau(Boolean State) {
+        this.HasEau = State;
+    }
+
+    /*
     public void GetPlats() {
         // TODO implement here
     }
@@ -86,6 +101,6 @@ public class Table : Strategy {
     /// </summary>
     public void SetPlats(void Plats) {
         // TODO implement here
-    }
+    }*/
 
 }

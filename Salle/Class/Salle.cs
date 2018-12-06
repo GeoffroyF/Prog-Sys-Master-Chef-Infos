@@ -7,12 +7,8 @@ using System.Text;
 
 public class Salle : PresentoireSalle {
 
-    public Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, Salle Instance, PresentoireSalle PresentoireSalle) {
-
-    }
-
-    public Salle(Carre expected_Carre, Carre carre2, MaitreHotel mH, CommisSalle commis, PresentoireSalle presentoire)
-    {
+    public Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle) {
+        //initialisations par défauts
     }
 
     private Carre CarreUn;
@@ -31,9 +27,8 @@ public class Salle : PresentoireSalle {
     /// Renvoie l'attribut CarreUn de type Carre
     /// </summary>
 
-
     public Carre GetCarreUn() {
-        // TODO implement here
+        return Instance.CarreUn;
     }
 
     /// <summary>
@@ -41,7 +36,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
 
     public Carre GetCarreDeux() {
-        // TODO implement here
+        return Instance.CarreDeux;
     }
 
     /// <summary>
@@ -49,7 +44,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
     
     public MaitreHotel GetMaitreHotel() {
-        //return Salle.MaitreHotel;
+        return Instance.MaitreHotel;
     }
 
     /// <summary>
@@ -57,7 +52,7 @@ public class Salle : PresentoireSalle {
     /// </summary>
 
     public CommisSalle GetCommis() {
-        // TODO implement here
+        return Instance.Commis;
     }
 
     /// <summary>
@@ -65,7 +60,8 @@ public class Salle : PresentoireSalle {
     /// </summary>
     
     public PresentoireSalle GetInstance() {
-        // TODO implement here
+        //si pas d'instance, la méthode la cree
+        return this;
     }
 
 }

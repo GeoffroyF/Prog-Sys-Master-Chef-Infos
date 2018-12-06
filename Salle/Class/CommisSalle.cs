@@ -4,32 +4,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class CommisSalle : PersonnelCuisine {
+public sealed class CommisSalle : PersonnelCuisine {
 
-    public CommisSalle() {
+    private CommisSalle(String Nom, String Prenom) : base(Nom, Prenom) {
     }
 
-    public static CommisSalle Instance;
-
-
-    public void GetInstance() {
-        // TODO implement here
+    //Singleton par propriété :
+    public static MaitreHotel Instance
+    {
+        get
+        {
+            return Instance;
+        }
     }
 
-    public void Debarasse() {
-        // TODO implement here
+    private String Nom;
+
+    private String Prenom;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    
+    public CommisSalle GetInstance() {
+        return this;
     }
 
-    public void AmenerEau() {
-        // TODO implement here
+    /// <summary>
+    /// Le commis debarasse
+    /// </summary>
+    
+    public void Debarasse(Table table) {
     }
 
-    public void AmenerPain() {
-        // TODO implement here
+    /// <summary>
+    /// Le commis amene l'eau
+    /// </summary>
+    
+    public void AmenerEau(Table table) {
     }
 
-    public void DresserTable() {
-        // TODO implement here
+    /// <summary>
+    /// Le commis ammene du pain
+    /// </summary>
+
+    public void AmenerPain(Table table) {
+    }
+
+    /// <summary>
+    /// Le commis redresse la table
+    /// </summary>
+
+    public void DresserTable(Table table) {
+        //check si table debarrassé?
     }
 
 }

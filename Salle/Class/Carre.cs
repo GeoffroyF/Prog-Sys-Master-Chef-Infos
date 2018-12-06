@@ -6,7 +6,8 @@ using System.Text;
 
 public class Carre {
 
-    public Carre() {
+    public Carre(Rang RangUn, Rang RangDeux) {
+        //initialisations par defauts
     }
 
     private Rang RangUn;
@@ -14,13 +15,20 @@ public class Carre {
     private Rang RangDeux;
 
 
+    /// <summary>
+    /// Renvoie l'attribut RangUn de type Rang
+    /// </summary>
 
-    public void GetRangUn() {
-        // TODO implement here
+    public Rang GetRangUn() {
+        return this.RangUn;
     }
 
-    public void GetRangDeux() {
-        // TODO implement here
+    /// <summary>
+    /// Renvoie l'attribut RangDeux de type Rang
+    /// </summary>
+
+    public Rang GetRangDeux() {
+        return this.RangDeux;
     }
 
 }
