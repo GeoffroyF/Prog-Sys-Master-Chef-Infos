@@ -6,21 +6,24 @@ using System.Text;
 
 public class ChefSale : PersonnelCuisine {
 
-    /// <summary>
-    /// Singleton
-    /// retourne l'instance si elle est deja crée
-    /// sinon crée un instance et la retourne
+    private static ChefSale Instance = null;
+
+    /// <summary>s
+    /// Constructeur heriter de PersoennelCuisine
     /// </summary>
-    public ChefSale() {
+    public ChefSale() : base("PLASTINA", "Fabien") {
     }
 
-    private static ChefSale Instance;
 
     /// <summary>
     /// Retourne l'unique instance
     /// </summary>
-    public void GetInstance() {
-        // TODO implement here
+    public ChefSale GetInstance()
+    {
+        if (Instance == null)
+        {
+            ChefSale.Instance = new ChefSale();
+        }
+        return ChefSale.Instance;
     }
-
 }

@@ -6,22 +6,22 @@ using System.Text;
 
 public class Plongeur : PersonnelCuisine {
 
-    /// <summary>
-    /// Singleton
-    /// retourne l'instance si elle est deja crée
-    /// sinon crée un instance et la retourne
-    /// </summary>
-    public Plongeur() {
-    }
+    private static Plongeur Instance = null;
 
-    private static Plongeur Instance;
+    /// <summary>s
+    /// Constructeur heriter de PersoennelCuisine
+    /// </summary>
+    public Plongeur() : base("BLOUSOT", "Eric") {
+    }
 
 
     /// <summary>
     /// Retourne l'unique instance
     /// </summary>
-    public void GetInstance() {
-        // TODO implement here
+    public Plongeur GetInstance() {
+        if(Instance == null) {
+            Plongeur.Instance = new Plongeur();
+        }
+        return Plongeur.Instance;
     }
-
 }

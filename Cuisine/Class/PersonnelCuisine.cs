@@ -14,34 +14,39 @@ public class PersonnelCuisine {
     /// A la création le isBusy doit etre false
     /// @param String nom
     /// @param String prenom
-    /// </summary>
-    public PersonnelCuisine() {
+    /// </summary>s
+    public PersonnelCuisine(String nom, String prenom) {
+        this.Nom = nom;
+        this.Prenom = prenom;
+        this.isBusy = false;
     }
 
-    private String Nom;
+    protected String Nom;
 
-    private String Prenom;
+    protected String Prenom;
 
-    private bool isBusy;
+    protected bool isBusy;
 
 
     /// <summary>
     /// Retourne le string Nom
     /// </summary>
-    public void GetNom() {
-        // TODO implement here
+    public String GetNom() {
+        return this.Nom;
     }
-
+    
     /// <summary>
     /// Retourne le string prenom
     /// </summary>
-    public void GetPrenom() {
-        // TODO implement here
+    public String GetPrenom() {
+        return this.Prenom;
     }
 
-
-    public void GetIsBusy() {
-        // TODO implement here
+    /// <summary>
+    /// Retourne le isBusy
+    /// </summary>s
+    public bool GetIsBusy() {
+        return this.isBusy;
     }
 
     /// <summary>
@@ -50,8 +55,8 @@ public class PersonnelCuisine {
     ///  false : il est actuellement libre
     /// @param bool status
     /// </summary>
-    public void SetIsBusy(bool) {
-        // TODO implement here
+    public void SetIsBusy(bool isBusy) {
+        this.isBusy = isBusy;
     }
 
 }

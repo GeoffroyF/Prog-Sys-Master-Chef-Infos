@@ -4,26 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ChefSucre : PersonnelCuisine {
-
-    private static ChefSucre Instance = null;
+public class ChefCuisine : PersonnelCuisine {
+    private static ChefCuisine Instance = null;
 
     /// <summary>s
     /// Constructeur heriter de PersoennelCuisine
     /// </summary>
-    public ChefSucre() : base("PLASTINA", "Fabien") {
+    public ChefCuisine() : base("BLOUSOT", "Eric")
+    {
     }
 
 
     /// <summary>
     /// Retourne l'unique instance
     /// </summary>
-    public ChefSucre GetInstance()
+    public ChefCuisine GetInstance()
     {
         if (Instance == null)
         {
-            ChefSucre.Instance = new ChefSucre();
+            ChefCuisine.Instance = new ChefCuisine();
         }
-        return ChefSucre.Instance;
+        return ChefCuisine.Instance;
     }
 }
