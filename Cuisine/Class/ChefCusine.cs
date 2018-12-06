@@ -6,11 +6,19 @@ using System.Text;
 
 public class ChefCusine : PersonnelCuisine {
 
+    /// <summary>
+    /// Singleton
+    /// retourne l'instance si elle est deja crée
+    /// sinon crée un instance et la retourne
+    /// </summary>
     public ChefCusine() {
     }
 
     private static ChefCusine Instance;
 
+    /// <summary>
+    /// Retourne l'unique instance
+    /// </summary>
     public void GetInstance() {
         // TODO implement here
     }
