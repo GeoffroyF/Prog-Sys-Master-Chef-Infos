@@ -26,6 +26,8 @@ public class Table {
 
     private string[] Plats;
 
+    //public Reservation Reservation = new Reservation (false, true);
+
     /// <summary>
     /// 
     /// </summary>
@@ -62,7 +64,8 @@ public class Table {
     }
 
     /// <summary>
-    /// @param boolean
+    /// @param boolean 
+    /// Creer un objet reservation lorsque Setté a true
     /// </summary>
     public void SetIsReserved(Boolean State) {
         this.IsReserved =  State;

@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,23 +5,26 @@ using System.Text;
 
 public class Reservation {
 
-    public Reservation(Boolean Reserved, Table Table, Boolean Matin) {
+    Class.Strategy _GetterSetter_Reservation;
+
+    public Reservation(Boolean Reserved, Boolean Matin) {
         Date = DateTime.Now;
     }
 
     private Boolean Reserved;
 
-    private Table Table;
+    //private Table Table;
+    //L'objet Reservation compose une Table, on l'accede par cette table
 
-    //false = Service du Midi
-    //True = Service du soir
+    //True = Service du Midi
+    //false = Service du soir
 
     private Boolean Matin;
 
     private DateTime Date;
 
     /// <summary>
-    /// 
+    /// Renvoie 
     /// </summary>
     
     public Boolean GetReserved() {
@@ -31,26 +33,28 @@ public class Reservation {
 
     /// <summary>
     /// @param boolean
+    /// Change l'etat de la reservation
     /// </summary>
     
     public void SetReserved(Boolean State) {
         this.Reserved = State;
     }
 
-    /// <summary>
+    /*/// <summary>
     /// 
     /// </summary>
     
     public Table GetTable() {
-        return this.Table;
-    }
+        Table Table
+        return Table;
+    }*/
 
-    /// <summary>
+    /*/// <summary>
     /// @param Table
     /// </summary>
     public void SetTable(Table Table) {
         this.Table = Table;
-    }
+    }*/
 
     /// <summary>
     /// 

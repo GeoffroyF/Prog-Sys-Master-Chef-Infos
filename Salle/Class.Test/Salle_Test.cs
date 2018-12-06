@@ -4,8 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Class.Test
 {
     [TestClass]
+
+    
     public class Salle_Test
-    {
+    {/*
 
         public void Test_GetCarreUn()
         {
@@ -95,6 +97,8 @@ namespace Class.Test
             //Assert
 
 
-        }
+        }*/
     }
-}
+    
+
+    }
