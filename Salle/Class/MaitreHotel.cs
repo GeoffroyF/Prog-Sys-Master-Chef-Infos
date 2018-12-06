@@ -9,7 +9,8 @@ public class MaitreHotel : PersonnelCuisine {
     public MaitreHotel() {
     }
 
-    private static MaitreHotel Instance;
+//private static MaitreHotel Instance;
+    public MaitreHotel Instance;
 
     public void GetInstance() {
         // TODO implement here
@@ -22,6 +23,8 @@ public class MaitreHotel : PersonnelCuisine {
     /// <summary>
     /// @param Reservation
     /// </summary>
+    /// 
+
     public void AttribueTable(void Reservation) {
         // TODO implement here
     }
