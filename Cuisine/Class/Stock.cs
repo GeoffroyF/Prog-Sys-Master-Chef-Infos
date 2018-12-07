@@ -17,21 +17,26 @@ public class Stock {
 
     private static Stock Instance;
 
-
-    public void GetZoneDanree() {
-        // TODO implement here
+    /// <summary>
+    /// This should return the list of all the ingrediants that are stocked in ZoneDanree
+    /// </summary>
+    public Ingrediant[] GetZoneDanree() {
+        return this.ZoneDanree;
     }
 
-    public void GetChambreFroide() {
-        // TODO implement here
+    public Ingrediant[] GetChambreFroide() {
+        return this.ChambreFroide;
     }
 
-    public void GetCongelo() {
-        // TODO implement here
+    public Ingrediant[] GetCongelo() {
+        return this.Congelo;
     }
 
-    public void GetInstance() {
-        // TODO implement here
+    public Stock GetInstance() {
+        if(Instance is null) {
+            Instance = new Stock();
+        }
+        return Instance;
     }
 
 }
