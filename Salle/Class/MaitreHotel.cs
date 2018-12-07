@@ -27,11 +27,13 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
     // singleton par propriété :
     public static MaitreHotel Instance{
+
         get
         {
             return Instance;
         }
     }
+
     
 
 
@@ -51,5 +53,7 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
     public void AttribueTable(Reservation TableReserve) {
     }
+
+
 
 }

@@ -7,15 +7,29 @@ namespace Class.Test
 
     
     public class Salle_Test
-    {/*
-
+    {
+        /*
         public void Test_GetCarreUn()
         {
             //Arrange
-            Carre Expected_Carre = new Carre();
-            Carre Carre2 = new Carre ();
-            MaitreHotel MH = new MaitreHotel () ;
-            CommisSalle Commis = new CommisSalle ();
+            //Arrange
+            // Rang 1
+            Serveur Serveur_Rang1 = new Serveur("Dupont", "Lucas");
+            ChefRang CR_Rang1 = new ChefRang("Pascal", "Henry");
+            Table[] Liste_Rang1 = new Table[3];
+            Rang Rang = new Rang(Serveur_Rang1, CR_Rang1, Liste_Rang1);
+
+            //Rang2
+            Serveur Serveur_Rang2 = Serveur_Rang1;
+            ChefRang ChefRang_Rang2 = CR_Rang1;
+            Table[] Liste_Rang2 = Liste_Rang1;
+            Rang Rang2 = new Rang(Serveur_Rang2, ChefRang_Rang2, Liste_Rang2);
+
+            Carre Carre = new Carre(Rang, Rang2);
+            Carre Carre2 = Carre;
+
+            MaitreHotel MH = new MaitreHotel ("Dupont", "Lucas") ;
+            CommisSalle Commis = new CommisSalle ("Pascal", "Henry");
             PresentoireSalle Presentoire = new PresentoireSalle ();
 
             Salle Salle_Teste = new Salle (Expected_Carre, Carre2,MH,Commis,Presentoire);
@@ -26,7 +40,7 @@ namespace Class.Test
             //Assert
             Assert.AreEqual(Actual_Carre, Expected_Carre);
         }
-
+        
         public void Test_GetCarreDeux()
         {
             //Arrange
@@ -99,6 +113,6 @@ namespace Class.Test
 
         }*/
     }
-    
 
-    }
+
+}
