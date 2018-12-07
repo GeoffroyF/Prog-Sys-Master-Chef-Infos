@@ -8,6 +8,8 @@ public class Rang {
 
     public Rang(Serveur Serveur, ChefRang ChefRang, Table[] ListeTables) {
         //initialisations par défauts
+        Serveur.SetRang(this);
+        ChefRang.SetRang(this);
     }
 
     private Serveur Serveur;
@@ -36,8 +38,8 @@ public class Rang {
     /// Renvoie la liste des tables du rang
     /// </summary>
 
-    public Table GetListeTables() {
-        return this.ListeTables[0];
+    public Table[] GetListeTables() {
+        return this.ListeTables;
     }
 
 }

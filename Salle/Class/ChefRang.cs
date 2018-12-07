@@ -6,18 +6,14 @@ using System.Text;
 
 public class ChefRang : PersonnelCuisine {
 
-    public ChefRang(String Nom, String Prenom, Rang Rang) : base (Nom, Prenom) {
-        IsBusy = false;
+    public ChefRang(String Nom, String Prenom) : base (Nom, Prenom) {
     }
 
     private String Nom;
 
     private String Prenom;
-
-    private Boolean IsBusy;
-
+    
     private Rang Rang;
-
 
     /// <summary>
     /// Le CR place les clients
@@ -30,7 +26,14 @@ public class ChefRang : PersonnelCuisine {
     /// <summary>
     /// 
     /// </summary>
-    
+    public void SetRang(Rang Rang)
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+
     public Rang GetRang() {
         return this.Rang;
     }

@@ -6,7 +6,7 @@ using System.Text;
 
 public class Serveur : PersonnelCuisine {
 
-    public Serveur(String Nom, String Prenom, Rang Rang) : base (Nom, Prenom) {
+    public Serveur(String Nom, String Prenom) : base (Nom, Prenom) {
     }
 
     private String Nom;
@@ -15,8 +15,12 @@ public class Serveur : PersonnelCuisine {
 
     private Rang Rang;
 
-    public void GetRang() {
-        // TODO implement here
+    public void SetRang(Rang Rang)
+    {
+    }
+
+    public Rang GetRang() {
+        return this.Rang;
     }
 
     /// <summary>
