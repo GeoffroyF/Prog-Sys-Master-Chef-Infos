@@ -7,6 +7,7 @@ using System.Text;
 public class Serveur : PersonnelCuisine {
 
     public Serveur(String Nom, String Prenom) : base (Nom, Prenom) {
+        Rang = null;
     }
 
     private String Nom;
