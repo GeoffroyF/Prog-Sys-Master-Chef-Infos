@@ -9,31 +9,39 @@ public sealed class CommisSalle : PersonnelCuisine {
     private CommisSalle(String Nom, String Prenom) : base(Nom, Prenom) {
     }
 
-    //Singleton par propriété :
-    public static MaitreHotel Instance
-    {
-        get
-        {
-            return Instance;
-        }
-    }
+    private static CommisSalle instance = null;
+
 
     private String Nom;
 
     private String Prenom;
 
     /// <summary>
-    /// 
+    /// Methode d'instanciation unique
     /// </summary>
-    
-    public CommisSalle GetInstance() {
-        return this;
+    public static CommisSalle GetInstance(String Nom, String Prenom)
+    {
+        if (CommisSalle.instance == null)
+        {
+            if (!(Nom is null) && !(Prenom is null))
+            {
+                CommisSalle.instance = new CommisSalle(Nom, Prenom);
+
+            }
+            else
+            {
+                return CommisSalle.instance;
+                //Ici pb argument, la fonction renvoie une instance 'null'
+            }
+        }
+        return CommisSalle.instance;
     }
+
 
     /// <summary>
     /// Le commis debarasse
     /// </summary>
-    
+
     public void Debarasse(Table table) {
     }
 

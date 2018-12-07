@@ -6,35 +6,39 @@ using System.Text;
 
 public sealed class MaitreHotel : PersonnelCuisine {
 
+    //Cette implementation de singleton n'est pas valable sur plusieurs thread /!\
     private MaitreHotel(String Nom, String Prenom) : base (Nom, Prenom) {
     }
+
+    private static MaitreHotel instance = null;
+
 
     private String Nom;
 
     private String Prenom;
 
-    /*
-    > Singleton par initialisation unique :
+    /// <summary>
+    /// Methode d'instanciation unique
+    /// </summary>
 
-       private static MaitreHotel Instance = new MaitreHotel;
-
-     > Singleton par Methode :
-
-        public static MaitreHotel GetInstance() {
-            return Instance;
-        }
-    */
-
-    // singleton par propriété :
-    public static MaitreHotel Instance{
-
-        get
+    public static MaitreHotel GetInstance(String Nom, String Prenom)
+    {
+        if(MaitreHotel.instance == null)
         {
-            return Instance;
-        }
-    }
+            if (!(Nom is null) && !(Prenom is null))
+            {
+                MaitreHotel.instance = new MaitreHotel(Nom, Prenom);
 
-    
+            }
+            else
+            {
+                return MaitreHotel.instance;
+                //Ici pb argument, la fonction renvoie une instance 'null'
+            }
+        }
+        return MaitreHotel.instance;
+
+    }
 
 
     /// <summary>

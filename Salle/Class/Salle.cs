@@ -11,13 +11,7 @@ public class Salle : PresentoireSalle {
     }
 
 
-    public static Salle Instance
-    {
-        get
-        {
-            return Instance;
-        }
-    }
+    private static Salle instance = null;
 
 
     private Carre CarreUn;
@@ -65,12 +59,26 @@ public class Salle : PresentoireSalle {
     }
 
     /// <summary>
-    /// Renvoie l'instance de l'objet (et la cree si necessaire)
+    /// Methode d'instanciation unique
     /// </summary>
-    
-    public PresentoireSalle GetInstance() {
-        //si pas d'instance, la méthode la cree
-        return this;
+    public static Salle GetInstance(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle)
+    {
+        if (Salle.instance == null)
+        {
+            // Arguments :
+            //(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle)
+            if (!(CarreUn is null) && !(CarreDeux is null) && !(MaitreHotel is null) && !(Commis is null) && !(PresentoireSalle is null))
+            {
+                Salle.instance = new Salle(CarreUn, CarreDeux, MaitreHotel, Commis, PresentoireSalle);
+
+            }
+            else
+            {
+                return Salle.instance;
+                //Ici pb argument, la fonction renvoie une instance 'null'
+            }
+        }
+        return Salle.instance;
     }
 
 }
