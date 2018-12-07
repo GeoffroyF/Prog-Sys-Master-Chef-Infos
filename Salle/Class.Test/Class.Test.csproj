@@ -57,6 +57,8 @@
     <Compile Include="Carre_Test.cs" />
     <Compile Include="PersonnelCuisine_Test.cs" />
     <Compile Include="Serveur_Test.cs" />
+    <Compile Include="Commande_Test.cs" />
+    <Compile Include="ChefRang_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

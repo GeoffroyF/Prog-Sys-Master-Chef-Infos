@@ -6,7 +6,7 @@ using System.Text;
 
 public class Commande {
 
-    public Commande() {
+    public Commande(Table Table, String Plat) {
     }
 
     private Table Table;
@@ -15,19 +15,19 @@ public class Commande {
 
     private Boolean EnCours;
 
-    public void GetTable() {
-        // TODO implement here
+    public Table GetTable() {
+        return this.Table;
     }
 
-    public void GetPlats() {
-        // TODO implement here
+    public string GetPlats() {
+        return this.Plat;
     }
 
     /// <summary>
     /// @param Plat
     /// </summary>
     public void SetPlats(string Plat) {
-        // TODO implement here
+        this.Plat = Plat;
     }
 
 }
