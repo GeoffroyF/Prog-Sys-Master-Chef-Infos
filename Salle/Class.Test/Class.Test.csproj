@@ -54,6 +54,7 @@
     <Compile Include="Reservation_Test.cs" />
     <Compile Include="Table_Test.cs" />
     <Compile Include="Rang_Test.cs" />
+    <Compile Include="Carre_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
