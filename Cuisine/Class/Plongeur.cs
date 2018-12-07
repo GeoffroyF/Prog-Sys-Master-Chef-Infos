@@ -11,16 +11,22 @@ public class Plongeur : PersonnelCuisine {
     /// <summary>s
     /// Constructeur heriter de PersoennelCuisine
     /// </summary>
-    public Plongeur() : base("BLOUSOT", "Eric") {
+    public Plongeur(String nom = "BLOUSOT", String prenom = "Eric") : base(nom, prenom) {
     }
 
 
     /// <summary>
     /// Retourne l'unique instance
     /// </summary>
-    public Plongeur GetInstance() {
+    public Plongeur GetInstance(String nom = null, String  prenom = null) {
         if(Instance == null) {
-            Plongeur.Instance = new Plongeur();
+            if(!(nom is null) && !(prenom is null))
+            {
+                Plongeur.Instance = new Plongeur(nom, prenom);
+            } else
+            {
+                Plongeur.Instance = new Plongeur();
+            }
         }
         return Plongeur.Instance;
     }

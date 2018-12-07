@@ -9,7 +9,9 @@ public class Machines {
     public Machines() {
     }
 
-    private int Temps;
+    private DateTime Debut;
+
+    private DateTime DateFin;
 
     private int Capacite;
 
@@ -43,6 +45,23 @@ public class Machines {
     /// </summary>
     /// <param name="proprio"></param>
     public void SetProprio(PersonnelCuisine proprio) {
+
+    }
+
+    /// <summary>
+    /// Set the time of usage of the machine
+    /// </summary>
+    public void start(int s) {
+
+    }
+
+    /// <summary>
+    /// Return if the machine is busy or not
+    /// To do that it take the StartDate and DateFin and make the difference
+    /// </summary>
+    /// <returns></returns>
+    public bool isRunning()
+    {
 
     }
 

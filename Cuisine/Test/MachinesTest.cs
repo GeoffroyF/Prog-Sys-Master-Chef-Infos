@@ -16,9 +16,53 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestSingletonCuisine()
+        public void TestPropioChange()
         {
-            Assert.AreEqual(MachineUn.GetInstance(), MachineDeux.GetInstance(), "La Cuisine n'est pas un singleton");
+            var tmp = MachineUn.GetProprio();
+            MachineUn.SetProprio(new Plongeur().GetInstance());
+            Assert.AreNotEqual(tmp, MachineUn.GetProprio());
+        }
+
+        [TestMethod]
+        public void TestPropioChangeToNull()
+        {
+            var tmp = MachineUn.GetProprio();
+            MachineUn.SetProprio(null);
+            Assert.AreNotEqual(null, MachineUn.GetProprio());
+        }
+
+        [TestMethod]
+        public void TestPropioChangeToNull()
+        {
+            var tmp = MachineUn.GetProprio();
+            MachineUn.SetProprio(null);
+            Assert.AreNotEqual(null, MachineUn.GetProprio());
+        }
+
+        [TestMethod]
+        public void TestPropioIsRunning()
+        {
+        }
+
+        [TestMethod]
+        public void TestPropioIsRunningYes()
+        {
+            MachineUn.start(10);
+            Assert.AreEqual(MachineUn.isRunning(), true);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Erreur de paramettre")]
+        public void TestPropioIsRunningBug()
+        {
+            MachineUn.start(-10);
+        }
+
+        [TestMethod]
+        public void TestPropioIsRunningNo()
+        {
+            MachineUn.start(0);
+            Assert.AreEqual(MachineUn.isRunning(), false);
         }
     }
 }
