@@ -11,10 +11,10 @@ public class PresentoireSalle : Sujet {
 
     private static PresentoireSalle Instance;
 
-    private void BufferVaisseleSale;
+    //private void BufferVaisseleSale;
 
-    public void GetInstance() {
-        // TODO implement here
+    public PresentoireSalle GetInstance() {
+        return this;
     }
 
     public void GetBufferVaisseleSale() {

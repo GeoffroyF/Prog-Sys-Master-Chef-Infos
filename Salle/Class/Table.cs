@@ -6,9 +6,7 @@ using System.Text;
 
 public class Table {
 
-    public Table(int NombreChaises, int NombrePersonnes, Boolean IsReserved, Boolean HasPain, Boolean HasEau) {
-        NombreChaises = 4;
-        NombrePersonnes = 0;
+    public Table(int NombreChaises, int NombrePersonnes) {
         IsReserved = false;
         HasPain = false;
         HasEau = false;

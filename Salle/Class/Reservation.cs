@@ -7,13 +7,13 @@ public class Reservation {
 
     Class.Strategy _GetterSetter_Reservation;
 
-    public Reservation(Boolean Reserved, Boolean Matin) {
+    public Reservation(Boolean Reserved, Table Table, Boolean Matin) {
         Date = DateTime.Now;
     }
 
     private Boolean Reserved;
 
-    //private Table Table;
+    private Table Table;
     //L'objet Reservation compose une Table, on l'accede par cette table
 
     //True = Service du Midi
@@ -34,27 +34,28 @@ public class Reservation {
     /// <summary>
     /// @param boolean
     /// Change l'etat de la reservation
+    /// Check si la table est deja reserve / Change son état egalement
     /// </summary>
     
     public void SetReserved(Boolean State) {
         this.Reserved = State;
     }
 
-    /*/// <summary>
+    /// <summary>
     /// 
     /// </summary>
     
     public Table GetTable() {
-        Table Table
-        return Table;
-    }*/
+        //Table Table
+        return this.Table;
+    }
 
-    /*/// <summary>
+    /// <summary>
     /// @param Table
     /// </summary>
     public void SetTable(Table Table) {
         this.Table = Table;
-    }*/
+    }
 
     /// <summary>
     /// 
@@ -73,11 +74,11 @@ public class Reservation {
     }
 
     /// <summary>
-    /// 
+    /// QUELLE EST LUTILITE DE CETTE METODE ??
     /// </summary>
-    
+  /*  
     public DateTime GetDate() {
         return this.Date;
-    }
+    }*/
 
 }

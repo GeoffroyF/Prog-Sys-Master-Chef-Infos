@@ -10,7 +10,7 @@ namespace Class.Test
         public void Test_GetNombreChaises()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             int Expected = 4;
 
             //Action
@@ -24,7 +24,7 @@ namespace Class.Test
         public void Test_SetNombreChaises()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             int Expected = 6;
 
             //Action
@@ -38,7 +38,7 @@ namespace Class.Test
         public void Test_GetNombrePersonnes()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             int Expected = 4;
 
             //Action
@@ -52,7 +52,7 @@ namespace Class.Test
         public void Test_SetNombrePersonnes()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             int Expected = 6;
 
             //Action
@@ -66,7 +66,8 @@ namespace Class.Test
         public void Test_GetIsReserved()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //IsReserved a false par defaut
             Boolean Expected = false;
 
             //Action
@@ -80,7 +81,8 @@ namespace Class.Test
         public void Test_SetIsReserved()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //IsReserved a false par defaut
             Boolean Expected = true;
 
             //Action
@@ -94,7 +96,8 @@ namespace Class.Test
         public void Test_GetHasPain()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //HasPain a false par defaut
             Boolean Expected = false;
 
             //Action
@@ -108,7 +111,8 @@ namespace Class.Test
         public void Test_SetHasPain()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //HasPain a false par defaut
             Boolean Expected = true;
 
             //Action
@@ -122,7 +126,8 @@ namespace Class.Test
         public void Test_GetHasEau()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //HasEau a false par defaut
             Boolean Expected = false;
 
             //Action
@@ -136,7 +141,8 @@ namespace Class.Test
         public void Test_SetHasEau()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
+            //Has Eau a false par defaut
             Boolean Expected = true;
 
             //Action
@@ -150,7 +156,7 @@ namespace Class.Test
         public void Test_GetPlats()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             string[] Expected = { "Pates", "Pizza" };
 
             //Action
@@ -165,7 +171,7 @@ namespace Class.Test
         public void Test_SetPlats()
         {
             //Arrange
-            Table TableTest = new Table(4, 4, false, false, false);
+            Table TableTest = new Table(4, 4);
             string[] Expected = { "Pates", "Pizza" };
 
             //Action
