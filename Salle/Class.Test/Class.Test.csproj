@@ -59,6 +59,8 @@
     <Compile Include="Serveur_Test.cs" />
     <Compile Include="Commande_Test.cs" />
     <Compile Include="ChefRang_Test.cs" />
+    <Compile Include="Commisalle_Test.cs" />
+    <Compile Include="MaitreHotel_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
