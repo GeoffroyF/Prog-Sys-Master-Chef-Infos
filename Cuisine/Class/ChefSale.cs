@@ -31,7 +31,7 @@ public class ChefSale : PersonnelCuisine {
     /// <summary>
     /// Creation and return of the singleton without args
     /// </summary>
-    private static ChefSale GetInstance()
+    public static ChefSale GetInstance()
     {
         if (Instance == null)
         {

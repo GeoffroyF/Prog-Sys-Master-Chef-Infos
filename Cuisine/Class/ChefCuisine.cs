@@ -29,7 +29,7 @@ public class ChefCuisine : PersonnelCuisine {
     /// <summary>
     /// Creation and return of the singleton without args
     /// </summary>
-    private static ChefCuisine GetInstance()
+    public static ChefCuisine GetInstance()
     {
         if (Instance == null)
         {

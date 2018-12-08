@@ -30,7 +30,7 @@ public class Plongeur : PersonnelCuisine {
     /// <summary>
     /// Creation and return of the singleton without args
     /// </summary>
-    private static Plongeur GetInstance()
+    public static Plongeur GetInstance()
     {
         if (Instance == null)
         {
