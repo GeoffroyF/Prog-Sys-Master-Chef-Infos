@@ -22,14 +22,40 @@ public class Armoire {
 
 
     /// <summary>
-    /// Retourne le nombre d'assietes
+    /// Private constructor of the Singleton without args
+    /// </summary>
+    private Armoire()
+    {
+        this.Assiettes = 0;
+        this.Couverts = 0;
+        this.Verres = 0;
+        this.JeuCafe = 0;
+        this.Serviettes = 0;
+        this.Napes = 0;
+    }
+
+    /// <summary>
+    /// Private constructor of the Singleton without args
+    /// </summary>
+    private Armoire(int assiettes, int couverts, int verres, int jeuCafe, int serviettes, int napes)
+    {
+        this.Assiettes = assiettes;
+        this.Couverts = couverts;
+        this.Verres = verres;
+        this.JeuCafe = jeuCafe;
+        this.Serviettes = serviettes;
+        this.Napes = napes;
+    }
+
+    /// <summary>
+    /// Return the number of plates
     /// </summary>
     public int GetAssiettes() {
         return this.Assiettes;
     }
 
     /// <summary>
-    /// Met a jour le nombre d'assietes
+    /// Set the number of plates
     /// @param int
     /// </summary>
     public void SetAssiettes(int nb) {
@@ -37,14 +63,14 @@ public class Armoire {
     }
 
     /// <summary>
-    /// Retourne le nombre de Couverts
+    /// Return the number of Couverts
     /// </summary>
     public int GetCouverts() {
         return this.Couverts;
     }
 
     /// <summary>
-    /// Met a jours le nombre de couverts
+    /// Update the number of Couverts
     /// @param int
     /// </summary>
     public void SetCouverts(int nb) {
@@ -52,13 +78,14 @@ public class Armoire {
     }
 
     /// <summary>
-    /// Retourne le nombre de verres
+    /// Det the number of glasses
     /// </summary>
     public int GetVerres() {
         return this.Verres;
     }
 
     /// <summary>
+    /// Update the number of glasses
     /// @param int
     /// </summary>
     public void SetVerres(int nb) {
@@ -67,14 +94,14 @@ public class Armoire {
 
 
     /// <summary>
-    /// Retourne le nombre de jeu de café
+    /// Return the number of cofe sets
     /// </summary>
     public int GetJeuCafe() {
         return this.JeuCafe;
     }
 
     /// <summary>
-    /// Modifie le nombre de jeu de café
+    /// Update the number of cofe sets
     /// @param int
     /// </summary>
     public  void SetJeuCafe(int nb) {
@@ -82,14 +109,14 @@ public class Armoire {
     }
 
     /// <summary>
-    /// Retourne le nombre de serviettes
+    /// Return the number of towels
     /// </summary>
     public int GetServiettes() {
         return this.Serviettes;
     }
 
     /// <summary>
-    /// Met a jour le nombre de serviettes
+    /// Update the number of towels
     /// @param int
     /// </summary>
     public void SetServiettes(int nb) {
@@ -97,14 +124,14 @@ public class Armoire {
     }
 
     /// <summary>
-    /// Retoutne le nombre de napes
+    /// Return the number of tablecloth
     /// </summary>
     public int GetNapes() {
         return this.Napes;
     }
 
     /// <summary>
-    /// Met a jout le nombre de napes
+    /// Update the nulber of table cloth
     /// @param int
     /// </summary>
     public void SetNapes(int nb) {
@@ -112,12 +139,23 @@ public class Armoire {
     }
 
     /// <summary>
-    /// Singleton
-    /// Retourne l'unique instance
+    /// Creation and return of the singleton without args
     /// </summary>
-    public Armoire GetInstance() {
+    public static Armoire GetInstance() {
         if (Instance is null) {
             Instance = new Armoire();
+        }
+        return Instance;
+    }
+
+    /// <summary>
+    /// Creation and return of the singleton with args
+    /// </summary>
+    public static Armoire GetInstance(int assiettes, int couverts, int verres, int jeuCafe, int serviettes, int napes)
+    {
+        if(Instance is null)
+        {
+            Instance = new Armoire(assiettes, couverts, verres, jeuCafe, serviettes, napes);
         }
         return Instance;
     }

@@ -20,7 +20,7 @@ namespace Test
         [TestMethod]
         public void TestSingletonCuisine()
         {
-            Assert.AreEqual(Stock.GetInstance(array, array, array), Stock.GetInstance(), "La Cuisine n'est pas un singleton");
+            Assert.AreEqual(Stock.GetInstance(array, array, array), Stock.GetInstance(), "Stock is not a singleton");
         }
     }
 }

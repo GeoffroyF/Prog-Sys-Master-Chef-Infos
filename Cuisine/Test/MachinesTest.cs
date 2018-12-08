@@ -20,7 +20,7 @@ namespace Test
         {
             var tmp = MachineUn.GetProprio();
             MachineUn.SetProprio(Plongeur.GetInstance());
-            Assert.AreNotEqual(tmp, MachineUn.GetProprio());
+            Assert.AreNotEqual(tmp, MachineUn.GetProprio(), "The proprio didn't changed");
         }
 
         [TestMethod]
@@ -28,33 +28,28 @@ namespace Test
         {
             var tmp = MachineUn.GetProprio();
             MachineUn.SetProprio(null);
-            Assert.AreEqual(null, MachineUn.GetProprio());
+            Assert.AreEqual(null, MachineUn.GetProprio(), "The proprio is not null");
         }
 
         [TestMethod]
-        public void TestPropioIsRunning()
-        {
-        }
-
-        [TestMethod]
-        public void TestPropioIsRunningYes()
+        public void TestIsRunningYes()
         {
             MachineUn.start(60);
-            Assert.AreEqual(MachineUn.isRunning(), true);
+            Assert.AreEqual(MachineUn.isRunning(), true, "The machine is not running");
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException), "Erreur de paramettre")]
-        public void TestPropioIsRunningBug()
+        [ExpectedException(typeof(ArgumentException), "Argument error")]
+        public void TestIsRunningBug()
         {
             MachineUn.start(-10);
         }
 
         [TestMethod]
-        public void TestPropioIsRunningNo()
+        public void TestIsRunningNo()
         {
             MachineUn.start(0);
-            Assert.AreEqual(MachineUn.isRunning(), false);
+            Assert.AreEqual(MachineUn.isRunning(), false, "the machine is running");
         }
     }
 }

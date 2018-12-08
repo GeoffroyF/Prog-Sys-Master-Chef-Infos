@@ -68,7 +68,7 @@ public class Machines {
             this.DateFin = Debut.AddSeconds(s);
             return;
         }
-        throw new System.ArgumentException("Erreur de paramettre");
+        throw new System.ArgumentException("Argument error");
     }
 
     /// <summary>

@@ -6,121 +6,113 @@ namespace Test
     [TestClass]
     public class ArmoireTest
     {
-        private readonly Armoire ArmoireUn;
-        private readonly Armoire ArmoireDeux;
-
-        public ArmoireTest()
-        {
-            ArmoireUn = new Armoire();
-            ArmoireDeux = new Armoire();
-        }
 
         [TestMethod]
         public void TestSingletonCuisine()
         {
-            Assert.AreEqual(ArmoireUn.GetInstance(), ArmoireDeux.GetInstance(), "L'Armoire n'est pas un singleton");
+            Assert.AreEqual(Armoire.GetInstance(5,5,5,5,5,5), Armoire.GetInstance(), "Armoire is not a singleton");
         }
 
-        // Test pour les assiettes
+        // Test for the plates
         [TestMethod]
         public void TestAssiettesPlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetAssiettes();
-            ArmoireUn.GetInstance().SetAssiettes(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetAssiettes(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetAssiettes();
+            Armoire.GetInstance().SetAssiettes(5);
+            Assert.AreEqual(Armoire.GetInstance().GetAssiettes(), tmp + 5, "Plates does not increment");
         }
 
         [TestMethod]
         public void TestAssiettesMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetAssiettes();
-            ArmoireUn.GetInstance().SetAssiettes(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetAssiettes(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetAssiettes();
+            Armoire.GetInstance().SetAssiettes(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetAssiettes(), tmp - 5, "Plates does not decrement");
         }
 
-        // Test pour les couverts
+        // Test for the couverts
         [TestMethod]
         public void TestCouvertsPlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetCouverts();
-            ArmoireUn.GetInstance().SetCouverts(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetCouverts(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetCouverts();
+            Armoire.GetInstance().SetCouverts(5);
+            Assert.AreEqual(Armoire.GetInstance().GetCouverts(), tmp + 5, "Couverts does not increment");
         }
 
         [TestMethod]
         public void TestCouvertsMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetCouverts();
-            ArmoireUn.GetInstance().SetCouverts(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetCouverts(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetCouverts();
+            Armoire.GetInstance().SetCouverts(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetCouverts(), tmp - 5, "Couverts does not decrement");
         }
 
-        // Test pour les verres
+        // Test for the glasses
         [TestMethod]
         public void TestVerresPlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetVerres();
-            ArmoireUn.GetInstance().SetVerres(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetVerres(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetVerres();
+            Armoire.GetInstance().SetVerres(5);
+            Assert.AreEqual(Armoire.GetInstance().GetVerres(), tmp + 5, "Glasses does not increment");
         }
 
         [TestMethod]
         public void TestVerresMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetVerres();
-            ArmoireUn.GetInstance().SetVerres(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetVerres(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetVerres();
+            Armoire.GetInstance().SetVerres(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetVerres(), tmp - 5, "Glasses does not decrement");
         }
 
-        // Test pour les JeuCafe
+        // Test for the cofe sets
         [TestMethod]
         public void TestJeuCafePlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetJeuCafe();
-            ArmoireUn.GetInstance().SetJeuCafe(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetJeuCafe(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetJeuCafe();
+            Armoire.GetInstance().SetJeuCafe(5);
+            Assert.AreEqual(Armoire.GetInstance().GetJeuCafe(), tmp + 5, "Cofe sets does not increment");
         }
 
         [TestMethod]
         public void TestJeuCafeMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetJeuCafe();
-            ArmoireUn.GetInstance().SetJeuCafe(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetJeuCafe(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetJeuCafe();
+            Armoire.GetInstance().SetJeuCafe(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetJeuCafe(), tmp - 5, "Cofe sets does not decrement");
         }
 
-        // Test pour les Serviettes
+        // Test for the towels
         [TestMethod]
         public void TestServiettesPlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetServiettes();
-            ArmoireUn.GetInstance().SetServiettes(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetServiettes(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetServiettes();
+            Armoire.GetInstance().SetServiettes(5);
+            Assert.AreEqual(Armoire.GetInstance().GetServiettes(), tmp + 5, "Towels does not increment");
         }
 
         [TestMethod]
         public void TestServiettesMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetServiettes();
-            ArmoireUn.GetInstance().SetServiettes(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetServiettes(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetServiettes();
+            Armoire.GetInstance().SetServiettes(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetServiettes(), tmp - 5, "Towels does not decrement");
         }
 
-        // Test pour les Napes
+        // Test for the tablecloths
         [TestMethod]
         public void TestNapesPlus()
         {
-            var tmp = ArmoireUn.GetInstance().GetNapes();
-            ArmoireUn.GetInstance().SetNapes(5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetNapes(), tmp + 5);
+            var tmp = Armoire.GetInstance().GetNapes();
+            Armoire.GetInstance().SetNapes(5);
+            Assert.AreEqual(Armoire.GetInstance().GetNapes(), tmp + 5, "Tablecloth does not increment");
         }
 
         [TestMethod]
         public void TestNapesMoin()
         {
-            var tmp = ArmoireUn.GetInstance().GetNapes();
-            ArmoireUn.GetInstance().SetNapes(-5);
-            Assert.AreEqual(ArmoireUn.GetInstance().GetNapes(), tmp - 5);
+            var tmp = Armoire.GetInstance().GetNapes();
+            Armoire.GetInstance().SetNapes(-5);
+            Assert.AreEqual(Armoire.GetInstance().GetNapes(), tmp - 5, "Tablecloth does not decrement");
         }
     }
 }
