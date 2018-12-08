@@ -56,13 +56,15 @@ public class Machines {
     public void start(int s) {
         if(s == 0)
         {
-            this.Debut = new DateTime();
-            this.DateFin = new DateTime().AddHours(-1);
+            this.Debut = DateTime.Now;
+            this.DateFin = new DateTime(1900, 1, 1);
+            Console.WriteLine(Debut);
+            Console.WriteLine(DateFin);
             return;
         }
         else if(s > 0)
         {
-            this.Debut = new DateTime();
+            this.Debut = DateTime.Now;
             this.DateFin = Debut.AddSeconds(s);
             return;
         }
@@ -76,11 +78,14 @@ public class Machines {
     /// <returns></returns>
     public bool isRunning()
     {
-        if(this.DateFin < new DateTime())
+        if(this.DateFin < DateTime.Now)
         {
             return false;
         }
-        return true;
+        else
+        {
+            return true;
+        }
     }
 
 }
