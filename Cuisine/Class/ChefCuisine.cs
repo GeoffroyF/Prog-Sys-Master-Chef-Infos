@@ -15,21 +15,25 @@ public class ChefCuisine : PersonnelCuisine {
     }
 
     /// <summary>
-    /// Creation and return of the singleton
-    /// The first call of this should have two arguments for the First and Last name
+    /// Creation and return of the singleton with args
     /// </summary>
-    public static ChefCuisine GetInstance(String nom = null, String prenom = null)
+    public static ChefCuisine GetInstance(String nom, String prenom)
     {
         if (Instance == null)
         {
-            if (!(nom is null) && !(prenom is null))
-            {
-                ChefCuisine.Instance = new ChefCuisine(nom, prenom);
-            }
-            else
-            {
-                ChefCuisine.Instance = new ChefCuisine();
-            }
+            ChefCuisine.Instance = new ChefCuisine(nom, prenom);
+        }
+        return ChefCuisine.Instance;
+    }
+
+    /// <summary>
+    /// Creation and return of the singleton without args
+    /// </summary>
+    private static ChefCuisine GetInstance()
+    {
+        if (Instance == null)
+        {
+            ChefCuisine.Instance = new ChefCuisine();
         }
         return ChefCuisine.Instance;
     }
