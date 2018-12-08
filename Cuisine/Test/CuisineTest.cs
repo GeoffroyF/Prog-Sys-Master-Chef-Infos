@@ -14,12 +14,12 @@ namespace Test
         private PassePlat passePlat;
 
         public CuisineTest() {
-            stock = new Stock().GetInstance();
+            stock = Stock.GetInstance();
             machinesUn = new Machines("test1", 35);
             machinesDeux = new Machines("test3", 35);
             array = new Machines[2] { machinesDeux, machinesUn };
             ustenciles = new Ustenciles();
-             passePlat = new PassePlat();
+            passePlat = new PassePlat();
         }
 
         [TestMethod]

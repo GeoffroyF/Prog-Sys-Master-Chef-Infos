@@ -17,49 +17,54 @@ public class Cuisine {
     private PassePlat PassePlat;
 
     /// <summary>
-    /// Private constructor of the Singleton
+    /// Private constructor of the Singleton without args
     /// </summary>
-    private Cuisine(Stock stock = null, Machines[] machines = null, Ustenciles ustenciles = null, PassePlat passePlat = null)
+    private Cuisine(Stock stock, Machines[] machines, Ustenciles ustenciles, PassePlat passePlat)
     {
-        if (!(stock is null) && !(machines is null) && !(ustenciles is null) && !(passePlat is null))
-        {
-            this.Stock = stock;
-            this.Machines = machines;
-            this.Ustenciles = ustenciles;
-            this.PassePlat = passePlat;
-        }
-        else
-        {
-            this.Stock = null;
-            this.Machines = null;
-            this.Ustenciles = null;
-            this.PassePlat = null;
-        }
+        this.Stock = stock;
+        this.Machines = machines;
+        this.Ustenciles = ustenciles;
+        this.PassePlat = passePlat;
     }
 
     /// <summary>
-    /// Return the Amoire
+    /// Private constructor of the Singleton without args
     /// </summary>
-    /// <returns></returns>
-    public Armoire GetArmoire() {
+    private Cuisine()
+    {
+        this.Stock = null;
+        this.Machines = null;
+        this.Ustenciles = null;
+        this.PassePlat = null;
+    }
+
+        /// <summary>
+        /// Return the Amoire
+        /// </summary>
+        /// <returns></returns>
+        public Armoire GetArmoire() {
         return this.Armoire;
     }
 
     /// <summary>
-    /// Creation and return of the singleton
-    /// The first call of this should have two arguments for the First and Last name
+    /// Creation and return of the singleton with args
     /// </summary>
-    public static Cuisine GetInstance(Stock stock = null, Machines[] machines = null, Ustenciles ustenciles = null, PassePlat passePlat = null) {
+    public static Cuisine GetInstance(Stock stock, Machines[] machines, Ustenciles ustenciles, PassePlat passePlat) {
         if (Instance == null)
         {
-            if (!(stock is null) && !(machines is null) && !(ustenciles is null) && !(passePlat is null))
-            {
-                Cuisine.Instance = new Cuisine(stock, machines, ustenciles, passePlat);
-            }
-            else
-            {
-                Cuisine.Instance = new Cuisine();
-            }
+            Cuisine.Instance = new Cuisine(stock, machines, ustenciles, passePlat);
+        }
+        return Cuisine.Instance;
+    }
+
+    /// <summary>
+    /// Creation and return of the singleton without args
+    /// </summary>
+    public static Cuisine GetInstance()
+    {
+        if (Instance == null)
+        {
+            Cuisine.Instance = new Cuisine();
         }
         return Cuisine.Instance;
     }

@@ -6,19 +6,21 @@ namespace Test
     [TestClass]
     public class StockTest
     {
-        private readonly Stock StockUn;
-        private readonly Stock StockDeux;
+        private Ingrediant ingrediantUn;
+        private Ingrediant IngrediantDeux;
+        private Ingrediant[] array;
 
         public StockTest()
         {
-            StockUn = new Stock();
-            StockDeux = new Stock();
+            ingrediantUn = new Ingrediant();
+            IngrediantDeux = new Ingrediant();
+            array = new Ingrediant[2] { ingrediantUn, IngrediantDeux };
         }
 
         [TestMethod]
         public void TestSingletonCuisine()
         {
-            Assert.AreEqual(StockUn.GetInstance(), StockDeux.GetInstance(), "La Cuisine n'est pas un singleton");
+            Assert.AreEqual(Stock.GetInstance(array, array, array), Stock.GetInstance(), "La Cuisine n'est pas un singleton");
         }
     }
 }
