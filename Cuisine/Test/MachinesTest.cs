@@ -19,7 +19,7 @@ namespace Test
         public void TestPropioChange()
         {
             var tmp = MachineUn.GetProprio();
-            MachineUn.SetProprio(new Plongeur().GetInstance());
+            MachineUn.SetProprio(Plongeur.GetInstance());
             Assert.AreNotEqual(tmp, MachineUn.GetProprio());
         }
 

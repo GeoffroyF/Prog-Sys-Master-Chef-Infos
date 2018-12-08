@@ -8,17 +8,18 @@ public class Plongeur : PersonnelCuisine {
 
     private static Plongeur Instance = null;
 
-    /// <summary>s
-    /// Constructeur heriter de PersoennelCuisine
+    /// <summary>
+    /// Private constructor of the Singleton
     /// </summary>
-    public Plongeur(String nom = "BLOUSOT", String prenom = "Eric") : base(nom, prenom) {
+    private Plongeur(String nom = "ERREUR", String prenom = "ERREUR") : base(nom, prenom) {
     }
 
 
     /// <summary>
-    /// Retourne l'unique instance
+    /// Creation and return of the singleton
+    /// The first call of this should have two arguments for the First and Last name
     /// </summary>
-    public Plongeur GetInstance(String nom = null, String  prenom = null) {
+    public static Plongeur GetInstance(String nom = null, String  prenom = null) {
         if(Instance == null) {
             if(!(nom is null) && !(prenom is null))
             {
