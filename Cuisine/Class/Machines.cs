@@ -6,7 +6,9 @@ using System.Text;
 
 public class Machines {
 
-    public Machines() {
+    public Machines(String nom, int capacite) {
+        this.Nom = nom;
+        this.Capacite = capacite;
     }
 
     private DateTime Debut;
@@ -29,15 +31,15 @@ public class Machines {
     /// <summary>
     /// Return the actual person using the machine
     /// </summary>
-    public void GetProprio() {
-        // TODO implement here
+    public PersonnelCuisine GetProprio() {
+        return this.Proprio;
     }
 
     /// <summary>
     /// Return the name of the machine
     /// </summary>
-    public void GetNom() {
-        // TODO implement here
+    public String GetNom() {
+        return this.Nom;
     }
 
     /// <summary>
@@ -45,14 +47,26 @@ public class Machines {
     /// </summary>
     /// <param name="proprio"></param>
     public void SetProprio(PersonnelCuisine proprio) {
-
+        this.Proprio = proprio;
     }
 
     /// <summary>
     /// Set the time of usage of the machine
     /// </summary>
     public void start(int s) {
-
+        if(s == 0)
+        {
+            this.Debut = new DateTime();
+            this.DateFin = new DateTime().AddHours(-1);
+            return;
+        }
+        else if(s > 0)
+        {
+            this.Debut = new DateTime();
+            this.DateFin = Debut.AddSeconds(s);
+            return;
+        }
+        throw new System.ArgumentException("Erreur de paramettre");
     }
 
     /// <summary>
@@ -62,7 +76,11 @@ public class Machines {
     /// <returns></returns>
     public bool isRunning()
     {
-
+        if(this.DateFin < new DateTime())
+        {
+            return false;
+        }
+        return true;
     }
 
 }

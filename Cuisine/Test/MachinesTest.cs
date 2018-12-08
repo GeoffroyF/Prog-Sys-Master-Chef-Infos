@@ -11,8 +11,8 @@ namespace Test
 
         public MachineTest()
         {
-            MachineUn = new Machines();
-            MachineDeux = new Machines();
+            MachineUn = new Machines("Four", 35);
+            MachineDeux = new Machines("Four", 35);
         }
 
         [TestMethod]
@@ -28,15 +28,7 @@ namespace Test
         {
             var tmp = MachineUn.GetProprio();
             MachineUn.SetProprio(null);
-            Assert.AreNotEqual(null, MachineUn.GetProprio());
-        }
-
-        [TestMethod]
-        public void TestPropioChangeToNull()
-        {
-            var tmp = MachineUn.GetProprio();
-            MachineUn.SetProprio(null);
-            Assert.AreNotEqual(null, MachineUn.GetProprio());
+            Assert.AreEqual(null, MachineUn.GetProprio());
         }
 
         [TestMethod]
@@ -47,7 +39,7 @@ namespace Test
         [TestMethod]
         public void TestPropioIsRunningYes()
         {
-            MachineUn.start(10);
+            MachineUn.start(60);
             Assert.AreEqual(MachineUn.isRunning(), true);
         }
 
