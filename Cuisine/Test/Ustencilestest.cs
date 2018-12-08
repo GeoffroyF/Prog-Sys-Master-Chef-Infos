@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Test
 {
     [TestClass]
-    public class Ustenciles
+    public class UstencilesTest
     {
 
-        public Ustenciles()
+        public UstencilesTest()
         {
         }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 public class Cuisine {
-    private Armoire Armoire = new Armoire().GetInstance();
+    private Armoire Armoire = null;
 
     private static Cuisine Instance = null;
 
@@ -17,7 +17,28 @@ public class Cuisine {
     private PassePlat PassePlat;
 
     /// <summary>
-    /// Retourne l'amoire
+    /// Private constructor of the Singleton
+    /// </summary>
+    private Cuisine(Stock stock = null, Machines[] machines = null, Ustenciles ustenciles = null, PassePlat passePlat = null)
+    {
+        if (!(stock is null) && !(machines is null) && !(ustenciles is null) && !(passePlat is null))
+        {
+            this.Stock = stock;
+            this.Machines = machines;
+            this.Ustenciles = ustenciles;
+            this.PassePlat = passePlat;
+        }
+        else
+        {
+            this.Stock = null;
+            this.Machines = null;
+            this.Ustenciles = null;
+            this.PassePlat = null;
+        }
+    }
+
+    /// <summary>
+    /// Return the Amoire
     /// </summary>
     /// <returns></returns>
     public Armoire GetArmoire() {
@@ -25,19 +46,26 @@ public class Cuisine {
     }
 
     /// <summary>
-    /// Retourne l'unique singleton
+    /// Creation and return of the singleton
+    /// The first call of this should have two arguments for the First and Last name
     /// </summary>
-    /// <returns></returns>
-    public Cuisine GetInstance() {
-        if(Instance is null) {
-            Instance = new Cuisine();
+    public static Cuisine GetInstance(Stock stock = null, Machines[] machines = null, Ustenciles ustenciles = null, PassePlat passePlat = null) {
+        if (Instance == null)
+        {
+            if (!(stock is null) && !(machines is null) && !(ustenciles is null) && !(passePlat is null))
+            {
+                Cuisine.Instance = new Cuisine(stock, machines, ustenciles, passePlat);
+            }
+            else
+            {
+                Cuisine.Instance = new Cuisine();
+            }
         }
-        return Instance;
+        return Cuisine.Instance;
     }
 
-
     /// <summary>
-    /// Retourne me stock
+    /// Return the stock
     /// </summary>
     /// <returns></returns>
     public Stock GetStock() {
@@ -45,7 +73,7 @@ public class Cuisine {
     }
 
     /// <summary>
-    /// Retournes le tableau de machine
+    /// Return an array with all the machines
     /// </summary>
     /// <returns></returns>
     public Machines[] GetMachines() {
@@ -53,7 +81,7 @@ public class Cuisine {
     }
 
     /// <summary>
-    /// Retourne les Ustenciles
+    /// Return all the Ustenciles
     /// </summary>
     /// <returns></returns>
     public Ustenciles GetUstenciles() {
@@ -62,7 +90,7 @@ public class Cuisine {
 
 
     /// <summary>
-    /// Retourne le passeplat
+    /// Return the PassePlat
     /// </summary>
     /// <returns></returns>
     public PassePlat GetPassePlat() {
