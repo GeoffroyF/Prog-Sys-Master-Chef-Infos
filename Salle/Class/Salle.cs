@@ -67,16 +67,8 @@ public class Salle : PresentoireSalle {
         {
             // Arguments :
             //(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle)
-            if (!(CarreUn is null) && !(CarreDeux is null) && !(MaitreHotel is null) && !(Commis is null) && !(PresentoireSalle is null))
-            {
-                Salle.instance = new Salle(CarreUn, CarreDeux, MaitreHotel, Commis, PresentoireSalle);
+            Salle.instance = new Salle(CarreUn, CarreDeux, MaitreHotel, Commis, PresentoireSalle);
 
-            }
-            else
-            {
-                return Salle.instance;
-                //Ici pb argument, la fonction renvoie une instance 'null'
-            }
         }
         return Salle.instance;
     }

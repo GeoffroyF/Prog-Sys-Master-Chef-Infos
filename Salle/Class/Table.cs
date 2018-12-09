@@ -7,6 +7,8 @@ using System.Text;
 public class Table {
 
     public Table(int NombreChaises, int NombrePersonnes) {
+        this.NombreChaises = NombreChaises;
+        this.NombrePersonnes = NombrePersonnes;
         IsReserved = false;
         HasPain = false;
         HasEau = false;

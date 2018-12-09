@@ -6,7 +6,7 @@ using System.Text;
 
 public sealed class CommisSalle : PersonnelCuisine {
 
-    private CommisSalle(String Nom, String Prenom) : base(Nom, Prenom) {
+    private CommisSalle(String Nom = "NOM", String Prenom = "PRENOM") : base(Nom, Prenom) {
     }
 
     private static CommisSalle instance = null;
@@ -19,20 +19,11 @@ public sealed class CommisSalle : PersonnelCuisine {
     /// <summary>
     /// Methode d'instanciation unique
     /// </summary>
-    public static CommisSalle GetInstance(String Nom, String Prenom)
+    public static CommisSalle GetInstance(String Nom = null, String Prenom = null)
     {
         if (CommisSalle.instance == null)
         {
-            if (!(Nom is null) && !(Prenom is null))
-            {
-                CommisSalle.instance = new CommisSalle(Nom, Prenom);
-
-            }
-            else
-            {
-                return CommisSalle.instance;
-                //Ici pb argument, la fonction renvoie une instance 'null'
-            }
+            CommisSalle.instance = new CommisSalle(Nom, Prenom);
         }
         return CommisSalle.instance;
     }

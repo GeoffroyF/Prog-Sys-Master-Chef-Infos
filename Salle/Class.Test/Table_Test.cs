@@ -4,14 +4,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Class.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class Table_Test
     {
         [TestMethod]
         public void Test_GetNombreChaises()
         {
             //Arrange
-            Table TableTest = new Table(4, 4);
             int Expected = 4;
+            Table TableTest = new Table(Expected, 4);
 
             //Action
             int Actual = TableTest.GetNombreChaises();
@@ -156,8 +156,9 @@ namespace Class.Test
         public void Test_GetPlats()
         {
             //Arrange
-            Table TableTest = new Table(4, 4);
             string[] Expected = { "Pates", "Pizza" };
+            Table TableTest = new Table(4, 4);
+            TableTest.SetPlats(Expected);
 
             //Action
             string[] Actual = TableTest.GetPlats();

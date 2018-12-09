@@ -9,19 +9,11 @@ namespace Class.Test
         [TestMethod]
         public void Test_GetInstance()
         {
-            //Arrange
-            CommisSalle Commis;
-            CommisSalle ExpectedCommis;
-
-            //Action
-            ExpectedCommis = Commis.GetInstance("Dupont", "Lucas");
-            CommisSalle ActualCommis = Commis.GetInstance("Dupont", "Lucas");
-
             //Assert
-            Assert.AreEqual(ExpectedCommis, ActualCommis);
+            Assert.AreEqual(CommisSalle.GetInstance("",""), CommisSalle.GetInstance());
                 
         }
-
+        /*
         [TestMethod]
         public void Test_Debarasse()
         { 
@@ -44,6 +36,6 @@ namespace Class.Test
         public void Test_DresserTable()
         {
             //
-        }
+        }*/
     }
 }

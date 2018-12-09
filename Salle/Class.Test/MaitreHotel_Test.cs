@@ -9,20 +9,13 @@ namespace Class.Test
         [TestMethod]
         public void Test_GetInstance()
         {
-            //Arrange
-            MaitreHotel MH;
-            MaitreHotel ExpectedMH;
-
-            //Action
-            ExpectedMH = MH.GetInstance("Dupont", "Lucas");
-            MaitreHotel ActualMH = MH.GetInstance("Dupont", "Lucas");
 
             //Assert
-            Assert.AreEqual(ExpectedCommis, ActualCommis);
+            Assert.AreEqual(MaitreHotel.GetInstance("DUPONT", "Leon"), MaitreHotel.GetInstance());
 
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void Test_AttribueTable()
         {
             //
@@ -32,6 +25,6 @@ namespace Class.Test
         public void Test_AttribueTable()
         {
             //
-        }
+        }*/
     }
 }
