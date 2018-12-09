@@ -8,6 +8,9 @@ public class Reservation {
     Class.Strategy _GetterSetter_Reservation;
 
     public Reservation(Boolean Reserved, Table Table, Boolean Matin) {
+        this.Reserved = Reserved;
+        this.Table = Table;
+        this.Matin = Matin;
         Date = DateTime.Now;
     }
 

@@ -7,6 +7,8 @@ using System.Text;
 public class Carre {
 
     public Carre(Rang RangUn, Rang RangDeux) {
+        this.RangUn = RangUn;
+        this.RangDeux = RangDeux;
         //initialisations par defauts
     }
 

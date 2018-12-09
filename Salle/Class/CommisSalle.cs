@@ -12,9 +12,9 @@ public sealed class CommisSalle : PersonnelCuisine {
     private static CommisSalle instance = null;
 
 
-    private String Nom;
+    //private String Nom;
 
-    private String Prenom;
+    //private String Prenom;
 
     /// <summary>
     /// Methode d'instanciation unique

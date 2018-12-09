@@ -7,6 +7,8 @@ using System.Text;
 public class Commande {
 
     public Commande(Table Table, String Plat) {
+        this.Table = Table;
+        this.Plat=Plat;
     }
 
     private Table Table;

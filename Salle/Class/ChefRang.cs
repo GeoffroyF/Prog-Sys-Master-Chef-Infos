@@ -7,11 +7,12 @@ using System.Text;
 public class ChefRang : PersonnelCuisine {
 
     public ChefRang(String Nom, String Prenom) : base (Nom, Prenom) {
+        Rang = null;
     }
 
-    private String Nom;
+    //private String Nom;
 
-    private String Prenom;
+    //private String Prenom;
     
     private Rang Rang;
 
@@ -28,6 +29,7 @@ public class ChefRang : PersonnelCuisine {
     /// </summary>
     public void SetRang(Rang Rang)
     {
+        this.Rang = Rang;
     }
 
     /// <summary>

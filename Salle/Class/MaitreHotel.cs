@@ -13,9 +13,9 @@ public sealed class MaitreHotel : PersonnelCuisine {
     private static MaitreHotel instance = null;
 
 
-    private String Nom;
+    //private String Nom;
 
-    private String Prenom;
+    //private String Prenom;
 
     /// <summary>
     /// Methode d'instanciation unique

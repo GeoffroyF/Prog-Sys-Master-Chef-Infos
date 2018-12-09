@@ -10,14 +10,15 @@ public class Serveur : PersonnelCuisine {
         Rang = null;
     }
 
-    private String Nom;
+    //private String Nom;
 
-    private String Prenom;
+    //private String Prenom;
 
     private Rang Rang;
 
     public void SetRang(Rang Rang)
     {
+        this.Rang = Rang;
     }
 
     public Rang GetRang() {

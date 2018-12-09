@@ -7,6 +7,8 @@ using System.Text;
 public class PersonnelCuisine {
 
     public PersonnelCuisine(String Nom , String Prenom) {
+        this.Nom = Nom;
+        this.Prenom = Prenom;
         IsBusy = false;
     }
 

@@ -8,6 +8,11 @@ using System.Text;
 public class Salle : PresentoireSalle {
 
     private Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle) {
+        this.CarreUn = CarreUn;
+        this.CarreDeux = CarreDeux;
+        this.MaitreHotel = MaitreHotel;
+        this.Commis = Commis;
+        this.PresentoireSalle = PresentoireSalle;
     }
 
 
