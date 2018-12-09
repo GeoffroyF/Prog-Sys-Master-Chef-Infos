@@ -14,135 +14,135 @@ namespace Test
         [TestMethod]
         public void TestSingletonUstenciles()
         {
-            Assert.AreEqual(Ustenciles.getInstance(5, 5, 5, 5, 5, 5, 5, 5), Ustenciles.getInstance(), true, "Ustenciles is not a singleton");
+            Assert.AreEqual(Ustenciles.GetInstance(5, 5, 5, 5, 5, 5, 5, 5), Ustenciles.GetInstance(), "Ustenciles is not a singleton");
         }
 
         // Test of Casseroles
         [TestMethod]
         public void TestCasserolesAdd()
         {
-            var tmp = Ustenciles.getCasseroles();
-            Ustenciles.setCasseroles(5);
-            Assert.AreEqual(Ustenciles.getCasseroles(), tmp + 5, true, "Casseroles did not increase");
+            var tmp = Ustenciles.GetInstance().GetCasseroles();
+            Ustenciles.GetInstance().SetCasseroles(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCasseroles(), tmp + 5, "Casseroles did not increase");
         }
         [TestMethod]
         public void TestCasserolesMin()
         {
-            var tmp = Ustenciles.getCasseroles();
-            Ustenciles.setCasseroles(-5);
-            Assert.AreEqual(Ustenciles.getCasseroles(), tmp - 5, true, "Casseroles did not decrease");
+            var tmp = Ustenciles.GetInstance().GetCasseroles();
+            Ustenciles.GetInstance().SetCasseroles(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCasseroles(), tmp - 5, "Casseroles did not decrease");
         }
 
         // Test of Poels
         [TestMethod]
         public void TestPoelsAdd()
         {
-            var tmp = Ustenciles.getPoels();
-            Ustenciles.setPoels(5);
-            Assert.AreEqual(Ustenciles.getPoels(), tmp + 5, true, "Poels did not increase");
+            var tmp = Ustenciles.GetInstance().GetPoels();
+            Ustenciles.GetInstance().SetPoels(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetPoels(), tmp + 5, "Poels did not increase");
         }
         [TestMethod]
         public void TestPoelsMin()
         {
-            var tmp = Ustenciles.getPoels();
-            Ustenciles.setPoels(-5);
-            Assert.AreEqual(Ustenciles.getPoels(), tmp - 5, true, "Poels did not decrease");
+            var tmp = Ustenciles.GetInstance().GetPoels();
+            Ustenciles.GetInstance().SetPoels(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetPoels(), tmp - 5, "Poels did not decrease");
         }
 
         // Test of CuilliereBois
         [TestMethod]
         public void TestCuilliereBoisAdd()
         {
-            var tmp = Ustenciles.getCuilliereBois();
-            Ustenciles.setCuilliereBois(5);
-            Assert.AreEqual(Ustenciles.getCuilliereBois(), tmp + 5, true, "CuilliereBois did not increase");
+            var tmp = Ustenciles.GetInstance().GetCuilliereBois();
+            Ustenciles.GetInstance().SetCuilliereBois(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCuilliereBois(), tmp + 5, "CuilliereBois did not increase");
         }
         [TestMethod]
         public void TestCuilliereBoisMin()
         {
-            var tmp = Ustenciles.getCuilliereBois();
-            Ustenciles.setCuilliereBois(-5);
-            Assert.AreEqual(Ustenciles.getCuilliereBois(), tmp - 5, true, "CuilliereBois did not decrease");
+            var tmp = Ustenciles.GetInstance().GetCuilliereBois();
+            Ustenciles.GetInstance().SetCuilliereBois(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCuilliereBois(), tmp - 5, "CuilliereBois did not decrease");
         }
 
         // Test of BolSalades
         [TestMethod]
         public void TestBolSaladesAdd()
         {
-            var tmp = Ustenciles.getBolSalades();
-            Ustenciles.setBolSalades(5);
-            Assert.AreEqual(Ustenciles.getBolSalades(), tmp + 5, true, "BolSalades did not increase");
+            var tmp = Ustenciles.GetInstance().GetBolSalades();
+            Ustenciles.GetInstance().SetBolSalades(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetBolSalades(), tmp + 5, "BolSalades did not increase");
         }
         [TestMethod]
         public void TesBolSaladesMin()
         {
-            var tmp = Ustenciles.getBolSalades();
-            Ustenciles.setBolSalades(-5);
-            Assert.AreEqual(Ustenciles.getBolSalades(), tmp - 5, true, "BolSalades did not decrease");
+            var tmp = Ustenciles.GetInstance().GetBolSalades();
+            Ustenciles.GetInstance().SetBolSalades(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetBolSalades(), tmp - 5, "BolSalades did not decrease");
         }
 
         // Test of PresseAgrumes
         [TestMethod]
         public void TestPresseAgrumesAdd()
         {
-            var tmp = Ustenciles.getPresseAgrumes();
-            Ustenciles.setPresseAgrumes(5);
-            Assert.AreEqual(Ustenciles.getPresseAgrumes(), tmp + 5, true, "PresseAgrumes did not increase");
+            var tmp = Ustenciles.GetInstance().GetPresseAgrumes();
+            Ustenciles.GetInstance().SetPresseAgrumes(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetPresseAgrumes(), tmp + 5, "PresseAgrumes did not increase");
         }
         [TestMethod]
         public void TesPresseAgrumessMin()
         {
-            var tmp = Ustenciles.getPresseAgrumes();
-            Ustenciles.setPresseAgrumes(-5);
-            Assert.AreEqual(Ustenciles.getPresseAgrumes(), tmp - 5, true, "PresseAgrumes did not decrease");
+            var tmp = Ustenciles.GetInstance().GetPresseAgrumes();
+            Ustenciles.GetInstance().SetPresseAgrumes(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetPresseAgrumes(), tmp - 5, "PresseAgrumes did not decrease");
         }
 
         // Test of Tamis
         [TestMethod]
         public void TestTamisAdd()
         {
-            var tmp = Ustenciles.getTamis();
-            Ustenciles.setTamiss(5);
-            Assert.AreEqual(Ustenciles.getTamis(), tmp + 5, true, "Tamis did not increase");
+            var tmp = Ustenciles.GetInstance().GetTamis();
+            Ustenciles.GetInstance().SetTamis(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetTamis(), tmp + 5, "Tamis did not increase");
         }
         [TestMethod]
         public void TesTamisMin()
         {
-            var tmp = Ustenciles.getTamis();
-            Ustenciles.setTamis(-5);
-            Assert.AreEqual(Ustenciles.getTamis(), tmp - 5, true, "Tamis did not decrease");
+            var tmp = Ustenciles.GetInstance().GetTamis();
+            Ustenciles.GetInstance().SetTamis(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetTamis(), tmp - 5, "Tamis did not decrease");
         }
 
         // Test of Entoinnoirs
         [TestMethod]
         public void TestEntoinnoirsAdd()
         {
-            var tmp = Ustenciles.getEntoinnoirs();
-            Ustenciles.setEntoinnoirs(5);
-            Assert.AreEqual(Ustenciles.getEntoinnoirs(), tmp + 5, true, "Entoinnoirs did not increase");
+            var tmp = Ustenciles.GetInstance().GetEntoinnoirs();
+            Ustenciles.GetInstance().SetEntoinnoirs(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetEntoinnoirs(), tmp + 5, "Entoinnoirs did not increase");
         }
         [TestMethod]
         public void TesEntoinnoirsMin()
         {
-            var tmp = Ustenciles.getEntoinnoirs();
-            Ustenciles.setEntoinnoirs(-5);
-            Assert.AreEqual(Ustenciles.getEntoinnoirs(), tmp - 5, true, "Entoinnoirs did not decrease");
+            var tmp = Ustenciles.GetInstance().GetEntoinnoirs();
+            Ustenciles.GetInstance().SetEntoinnoirs(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetEntoinnoirs(), tmp - 5, "Entoinnoirs did not decrease");
         }
 
         // Test of Couteaux
         [TestMethod]
         public void TestCouteauxAdd()
         {
-            var tmp = Ustenciles.getCouteaux();
-            Ustenciles.setCouteaux(5);
-            Assert.AreEqual(Ustenciles.getCouteaux(), tmp + 5, true, "Couteaux did not increase");
+            var tmp = Ustenciles.GetInstance().GetCouteaux();
+            Ustenciles.GetInstance().SetCouteaux(5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCouteaux(), tmp + 5, "Couteaux did not increase");
         }
         [TestMethod]
         public void TesCouteauxMin()
         {
-            var tmp = Ustenciles.getCouteaux();
-            Ustenciles.setCouteaux(-5);
-            Assert.AreEqual(Ustenciles.getCouteaux(), tmp - 5, true, "Couteaux did not decrease");
+            var tmp = Ustenciles.GetInstance().GetCouteaux();
+            Ustenciles.GetInstance().SetCouteaux(-5);
+            Assert.AreEqual(Ustenciles.GetInstance().GetCouteaux(), tmp - 5, "Couteaux did not decrease");
         }
     }
 }

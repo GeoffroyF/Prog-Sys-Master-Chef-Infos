@@ -18,7 +18,7 @@ namespace Test
             machinesUn = new Machines("test1", 35);
             machinesDeux = new Machines("test3", 35);
             array = new Machines[2] { machinesDeux, machinesUn };
-            ustenciles = new Ustenciles();
+            ustenciles = Ustenciles.GetInstance();
             passePlat = new PassePlat();
         }
 

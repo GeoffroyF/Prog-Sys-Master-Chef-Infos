@@ -6,7 +6,34 @@ using System.Text;
 
 public class Ustenciles {
 
-    public Ustenciles() {
+    /// <summary>
+    /// Private constructor of the Singleton without args
+    /// </summary>
+    private Ustenciles()
+    {
+        this.Casseroles = 0;
+        this.Poels = 0;
+        this.CuilliereBois = 0;
+        this.PresseAgrumes = 0;
+        this.BolSalades = 0;
+        this.Tamis = 0;
+        this.Entoinnoirs = 0;
+        this.Couteaux = 0;
+    }
+
+    /// <summary>
+    /// Private constructor of the Singleton with args
+    /// </summary>
+    private Ustenciles(int casseroles, int poels, int cuillireBois, int bolSalades, int PressesAgrumes, int tamis, int entonnoirs, int couteaux)
+    {
+        this.Casseroles = casseroles;
+        this.Poels = poels;
+        this.CuilliereBois = cuillireBois;
+        this.PresseAgrumes = PressesAgrumes;
+        this.BolSalades = bolSalades;
+        this.Tamis = tamis;
+        this.Entoinnoirs = entonnoirs;
+        this.Couteaux = couteaux;
     }
 
     private int Casseroles;
@@ -28,96 +55,154 @@ public class Ustenciles {
     private static Ustenciles Instance;
 
 
-    public void GetCasseroles() {
-        // TODO implement here
+    /// <summary>
+    /// Return the number of casseroles
+    /// </summary>
+    /// <returns></returns>
+    public int GetCasseroles()
+    {
+        return this.Casseroles;
     }
 
     /// <summary>
-    /// @param int
+    /// Chnage the number of casseroles
     /// </summary>
+    /// <param name="nb"></param>
     public void SetCasseroles(int nb) {
-        // TODO implement here
-    }
-
-    public void GetPoels() {
-        // TODO implement here
+        this.Casseroles += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the number of poels
     /// </summary>
+    /// <returns></returns>
+    public int GetPoels() {
+        return this.Poels;
+    }
+
+    /// <summary>
+    /// Change the number of Poels
+    /// </summary>
+    /// <param name="nb"></param>
     public void SetPoels(int nb) {
-        // TODO implement here
-    }
-
-    public void GetCuilliereBois() {
-        // TODO implement here
+        this.Poels += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the number of wood spoon
     /// </summary>
+    public int GetCuilliereBois() {
+        return this.CuilliereBois;
+    }
+
+    /// <summary>
+    /// Change the number of wood spoon
+    /// </summary>
+    /// <param name="nb"></param>
     public void SetCuilliereBois(int nb) {
-        // TODO implement here
-    }
-
-    public void GetBolSalades() {
-        // TODO implement here
+        this.CuilliereBois += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the number of BolSalades
     /// </summary>
+    /// <returns></returns>
+    public int GetBolSalades() {
+        return this.BolSalades;
+    }
+
+    /// <summary>
+    /// Change the number of BolSalades
+    /// </summary>
+    /// <param name="nb"></param>
     public void SetBolSalades(int nb) {
-        // TODO implement here
-    }
-
-    public void GetPresseAgrumes() {
-        // TODO implement here
+        this.BolSalades += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the number of PresseAgrumes
     /// </summary>
+    /// <returns></returns>
+    public int GetPresseAgrumes() {
+        return this.PresseAgrumes;
+    }
+
+    /// <summary>
+    /// Change the number of PresseAgrumes
+    /// </summary>
+    /// <param name="nb"></param>
     public void SetPresseAgrumes(int nb) {
-        // TODO implement here
+        this.PresseAgrumes += nb;
     }
-
-    public void GetTamis() {
-        // TODO implement here
+    
+    /// <summary>
+    /// Return the number of tamis
+    /// </summary>
+    /// <returns></returns>
+    public int GetTamis() {
+        return this.Tamis;
     }
 
     /// <summary>
-    /// @param int
+    /// Change the number of tamis
     /// </summary>
+    /// <param name="nb"></param>
     public void SetTamis(int nb) {
-        // TODO implement here
-    }
-
-    public void GetEntoinnoirs() {
-        // TODO implement here
+        this.Tamis += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the nymber of entonnoirs
     /// </summary>
+    /// <returns></returns>
+    public int GetEntoinnoirs() {
+        return this.Entoinnoirs;
+    }
+
+    /// <summary>
+    /// Chnage the number of entonnoirs
+    /// </summary>
+    /// <param name="nb"></param>
     public void SetEntoinnoirs(int nb) {
-        // TODO implement here
-    }
-
-    public void GetCouteaux() {
-        // TODO implement here
+        this.Entoinnoirs += nb;
     }
 
     /// <summary>
-    /// @param int
+    /// Return the number of knives
     /// </summary>
-    public void SetCouteaux(int nb) {
-        // TODO implement here
+    /// <returns></returns>
+    public int GetCouteaux() {
+        return this.Couteaux;
     }
 
-    public void GetInstance() {
-        // TODO implement here
+    /// <summary>
+    /// Change the number of knives
+    /// </summary>
+    /// <param name="nb"></param>
+    public void SetCouteaux(int nb) {
+        this.Couteaux += nb;
+    }
+
+    /// <summary>
+    /// Creation and return of the singleton without args
+    /// </summary>
+    public static Ustenciles GetInstance() {
+        if(Instance is null)
+        {
+            Instance = new Ustenciles();
+        }
+        return Instance;
+    }
+
+    /// <summary>
+    /// Creation and return of the singleton with args
+    /// </summary>
+    public static Ustenciles GetInstance(int casseroles, int poels, int cuillireBois, int bolSalades, int PressesAgrumes, int tamis, int entonnoirs, int couteaux) {
+        if (Instance is null)
+        {
+            Instance = new Ustenciles(casseroles, poels, cuillireBois, bolSalades, PressesAgrumes, tamis, entonnoirs, couteaux);
+        }
+        return Instance;
     }
 
 }
