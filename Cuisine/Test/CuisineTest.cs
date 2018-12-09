@@ -19,7 +19,7 @@ namespace Test
             machinesDeux = new Machines("test3", 35);
             array = new Machines[2] { machinesDeux, machinesUn };
             ustenciles = Ustenciles.GetInstance();
-            passePlat = new PassePlat();
+            passePlat = PassePlat.GetInstance();
         }
 
         [TestMethod]

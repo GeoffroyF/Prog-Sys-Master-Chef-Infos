@@ -6,7 +6,10 @@ using System.Text;
 
 public class PassePlat : Sujet {
 
-    public PassePlat() {
+    /// <summary>
+    /// Private constructor of the Singleton without args
+    /// </summary>
+    private PassePlat() {
     }
 
     private static PassePlat Instance;
@@ -14,9 +17,15 @@ public class PassePlat : Sujet {
     // TODO A faire
     private int BufferPlatReady;
 
-
-    public void GetInstance() {
-        // TODO implement here
+    /// <summary>
+    /// Creation and return of the singleton without args
+    /// </summary>
+    public static PassePlat GetInstance() {
+        if(Instance is null)
+        {
+            Instance = new PassePlat();
+        }
+        return Instance;
     }
 
     public void GetBufferPlatReady() {
