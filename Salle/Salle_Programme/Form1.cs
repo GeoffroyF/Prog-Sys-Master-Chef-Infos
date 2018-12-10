@@ -28,6 +28,7 @@ namespace Salle_Programme
         private Carre Carre1;
 
         private Table Table_8_Rang3_1, Table_4_Rang3_2, Table_8_Rang3_3;
+
         private Table[] TB_Rang3;
         private Rang Rang3;
         private Table Table_4_Rang_4_1, Table_8_Rang_4_2, Table_4_Rang_4_3;
@@ -42,7 +43,7 @@ namespace Salle_Programme
         //instanciation salle
         private String[] CMD;
         private Clients Groupe_test;
-
+        private Table Table_test;
 
         // 1 Groupe client
 
@@ -104,11 +105,32 @@ namespace Salle_Programme
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Instanciation Groupe Clients
             CMD = new String[2];
             CMD[0] = "Pates";
             CMD[1] = "Pizza";
             Groupe_test = new Clients(2, false, "presse", CMD);
-            MH.AttribueTable(Salle, Groupe_test,false);
+
+            //Acceuill, Attribution, placement clients & prise de commande
+            //Apport eau et pains
+            Table_test = MH.AttribueTable(Salle, Groupe_test,false);
+   
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Service 
+
+            //SR_1.AmenerSale();
+            Groupe_test.SetServi(true);
+
+            //demmarrer un timer en fn humeur
+
+            //lorsque fin timer
+
+            //SR_1.Debarrasse (Table)
+            
+
 
         }
     }

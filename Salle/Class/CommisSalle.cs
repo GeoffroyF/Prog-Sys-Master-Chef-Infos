@@ -30,13 +30,6 @@ public sealed class CommisSalle : PersonnelCuisine {
 
 
     /// <summary>
-    /// Le commis debarasse
-    /// </summary>
-
-    public void Debarasse(Table table) {
-    }
-
-    /// <summary>
     /// Le commis amene l'eau
     /// </summary>
     

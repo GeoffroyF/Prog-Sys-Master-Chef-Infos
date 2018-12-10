@@ -13,7 +13,7 @@ public class Clients
         this.IsReserved = IsReserved;
         this.Commandes = Commandes;
         this.Reservation = null;
-
+        this.Servi = false;
     }
 
     private String Humeur;
@@ -26,6 +26,18 @@ public class Clients
     private Reservation Reservation;
 
     private String[] Commandes;
+
+    private Boolean Servi;
+
+    public Boolean GetServi()
+    {
+        return this.Servi;
+    }
+
+    public void SetServi(Boolean State)
+    {
+        this.Servi = State;
+    }
 
     public Reservation GetIsReservation()
     {
