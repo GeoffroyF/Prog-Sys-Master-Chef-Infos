@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salle", "Salle\Salle.csproj", "{942D2D20-D3AD-4786-B696-7A12BF671D47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm_Salle", "Salle\WinForm_Salle.csproj", "{942D2D20-D3AD-4786-B696-7A12BF671D47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class", "Class\Class.csproj", "{ED2FEC28-241C-4E04-A5CD-E7A0F35DB10A}"
 EndProject

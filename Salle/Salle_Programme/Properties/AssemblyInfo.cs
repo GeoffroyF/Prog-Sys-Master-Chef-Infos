@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("Winform_Salle")]
+[assembly: AssemblyTitle("Salle_Programme")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Winform_SalleSalle")]
+[assembly: AssemblyProduct("Salle_Programme")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("942d2d20-d3ad-4786-b696-7a12bf671d47")]
+[assembly: Guid("5a86b7b8-0755-4cac-8704-7cb2e1d2bbdb")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //

@@ -7,7 +7,7 @@
     <ProjectGuid>{942D2D20-D3AD-4786-B696-7A12BF671D47}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Salle</RootNamespace>
-    <AssemblyName>Salle</AssemblyName>
+    <AssemblyName>WinForm_Salle</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

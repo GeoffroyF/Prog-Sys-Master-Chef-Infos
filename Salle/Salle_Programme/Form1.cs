@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForm_Salle
+namespace Salle_Programme
 {
+
     public partial class Form1 : Form
     {
-
         private MaitreHotel MH;
         private CommisSalle CS;
         private ChefRang CR_1, CR_2, CR_3, CR_4;
@@ -25,7 +25,7 @@ namespace WinForm_Salle
         private Table[] TB_Rang2;
         private Rang Rang2;
 
-        private Carre Carre1 ;
+        private Carre Carre1;
 
         private Table Table_8_Rang3_1, Table_4_Rang3_2, Table_8_Rang3_3;
         private Table[] TB_Rang3;
@@ -37,6 +37,8 @@ namespace WinForm_Salle
         private Carre Carre2;
 
         private Salle Salle;
+        private PresentoireSalle Presentoire;
+
         //instanciation salle
         //String[] CMD = { "Pates", "Pizza" }
         //Clients Groupe_test = new Clients(2, false, "presse", CMD);
@@ -47,9 +49,8 @@ namespace WinForm_Salle
 
         public Form1()
         {
-
             //Instanciation personnelle
-            
+
             MH = MaitreHotel.GetInstance("Maitre", "Hotel");
             CS = CommisSalle.GetInstance("Commis", "Salle");
 
@@ -74,38 +75,25 @@ namespace WinForm_Salle
             TB_Rang2[0] = Table_4_Rang_2_1 = new Table(4, 0);
             TB_Rang2[1] = Table_4_Rang_2_2 = new Table(4, 0);
             TB_Rang2[2] = Table_4_Rang_2_3 = new Table(4, 0);
-            TB_Rang2[3] = Table_4_Rang_2_4 = new Table(4, 0);                        
+            TB_Rang2[3] = Table_4_Rang_2_4 = new Table(4, 0);
             Rang2 = new Rang(SR_2, CR_2, TB_Rang2);
 
             Carre1 = new Carre(Rang1, Rang2);
 
-            TB_Rang3 [0] = Table_8_Rang3_1 = new Table(8, 0);
-            TB_Rang3 [1] = Table_4_Rang3_2 = new Table(4, 0);
-            TB_Rang3 [2] = Table_8_Rang3_3 = new Table(8, 0);
+            TB_Rang3[0] = Table_8_Rang3_1 = new Table(8, 0);
+            TB_Rang3[1] = Table_4_Rang3_2 = new Table(4, 0);
+            TB_Rang3[2] = Table_8_Rang3_3 = new Table(8, 0);
             Rang3 = new Rang(SR_3, CR_3, TB_Rang3);
 
-            TB_Rang4 [0] = Table_4_Rang_4_1 = new Table(4, 0);
-            TB_Rang4 [1] = Table_8_Rang_4_2 = new Table(8, 0);
-            TB_Rang4 [2] = Table_4_Rang_4_3 = new Table(4, 0);            
+            TB_Rang4[0] = Table_4_Rang_4_1 = new Table(4, 0);
+            TB_Rang4[1] = Table_8_Rang_4_2 = new Table(8, 0);
+            TB_Rang4[2] = Table_4_Rang_4_3 = new Table(4, 0);
             Rang4 = new Rang(SR_3, CR_3, TB_Rang3);
 
             Carre2 = new Carre(Rang3, Rang4);
 
-
-
+            Salle = Salle.GetInstance(Carre1, Carre2, MH, CS,Presentoire);
             InitializeComponent();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MH.AttribueTable();
-
-
-        }
-        private void Service (Boolean MatinMidi)
-        {
-            //
         }
     }
 }

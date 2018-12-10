@@ -39,7 +39,7 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
     public void AttribueTable(Salle Salle,Clients Clients, Reservation TableReserve) {
         //defini la table (si pas de reservation) 
-        // si resa (rajouter un if) Table_Attribue = TableReserve.Table
+        // si resa (rajouter un if) Table_Attribue = TableReserve.Table   << !!
 
         Carre CarreTemp=null;
         Rang Rangtemp=null;
@@ -50,52 +50,54 @@ public sealed class MaitreHotel : PersonnelCuisine {
         int Carre = 1;
 
         //balaye les differents rang
-
-        while (Table_vide == false)
-        {
-
-            switch (Carre)
+        //if (TableReserve == false)
+        //{
+            while (Table_vide == false)
             {
-                case 1:
-                    //Rang UN
-                    CarreTemp = Salle.GetCarreUn();
-                    Rangtemp = CarreTemp.GetRangUn();
-                    break;
-                case 2:
-                    //Rang DEUX
-                    //CarreTemp = Salle.GetCarreUn();
-                    Rangtemp = CarreTemp.GetRangDeux();
-                    break;
-                case 3:
-                    //Rang TROIS
-                    CarreTemp = Salle.GetCarreDeux();
-                    Rangtemp = CarreTemp.GetRangUn();
-                    break;
 
-                case 4:
-                    //Rang QUATRE
-                    //CarreTemp = Salle.GetCarreDeux();
-                    Rangtemp = CarreTemp.GetRangDeux();
-                    break;
-
-                case 5:
-                    //pas de table dispo
-                    //Message GUI
-                    break;
-            }
-
-
-            foreach (Table TBLE in Rangtemp.GetListeTables())
-            {
-                if (TBLE.GetNombrePersonnes() == 0)
+                switch (Carre)
                 {
-                    Table_vide = true;
-                    Table_attribue = TBLE;
-                    break;
+                    case 1:
+                        //Rang UN
+                        CarreTemp = Salle.GetCarreUn();
+                        Rangtemp = CarreTemp.GetRangUn();
+                        break;
+                    case 2:
+                        //Rang DEUX
+                        //CarreTemp = Salle.GetCarreUn();
+                        Rangtemp = CarreTemp.GetRangDeux();
+                        break;
+                    case 3:
+                        //Rang TROIS
+                        CarreTemp = Salle.GetCarreDeux();
+                        Rangtemp = CarreTemp.GetRangUn();
+                        break;
+
+                    case 4:
+                        //Rang QUATRE
+                        //CarreTemp = Salle.GetCarreDeux();
+                        Rangtemp = CarreTemp.GetRangDeux();
+                        break;
+
+                    case 5:
+                        //pas de table dispo
+                        //Message GUI
+                        break;
                 }
+
+
+                foreach (Table TBLE in Rangtemp.GetListeTables())
+                {
+                    if ((TBLE.GetNombrePersonnes() == 0) && (Clients.GetNBClients() <= TBLE.GetNombrePersonnes()))
+                    {
+                        Table_vide = true;
+                        Table_attribue = TBLE;
+                        break;
+                    }
+                }
+                Carre++;
             }
-            Carre ++;
-        }
+        //}
 
         //Demander au CR concerné 
         CR_Table = Rangtemp.GetChefRang();
