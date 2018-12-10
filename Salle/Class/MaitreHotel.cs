@@ -37,7 +37,7 @@ public sealed class MaitreHotel : PersonnelCuisine {
     /// Le MH defini la table qui sera attribue aux clients et appelle le Chef de rang pour qu'il amene les clients a la table
     /// </summary>
 
-    public void AttribueTable(Salle Salle,Clients Clients, Reservation TableReserve) {
+    public void AttribueTable(Salle Salle,Clients Clients, Boolean AReserve) {
         //defini la table (si pas de reservation) 
         // si resa (rajouter un if) Table_Attribue = TableReserve.Table   << !!
 
@@ -88,7 +88,7 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
                 foreach (Table TBLE in Rangtemp.GetListeTables())
                 {
-                    if ((TBLE.GetNombrePersonnes() == 0) && (Clients.GetNBClients() <= TBLE.GetNombrePersonnes()))
+                    if ((TBLE.GetNombrePersonnes() == 0) && (Clients.GetNBClients() <= TBLE.GetNombreChaises()))
                     {
                         Table_vide = true;
                         Table_attribue = TBLE;

@@ -40,8 +40,8 @@ namespace Salle_Programme
         private PresentoireSalle Presentoire;
 
         //instanciation salle
-        //String[] CMD = { "Pates", "Pizza" }
-        //Clients Groupe_test = new Clients(2, false, "presse", CMD);
+        private String[] CMD;
+        private Clients Groupe_test;
 
 
         // 1 Groupe client
@@ -66,12 +66,14 @@ namespace Salle_Programme
 
             //Instanciation Salle
 
+            TB_Rang1 = new Table[4];
             TB_Rang1[0] = Table_4_Rang1_1 = new Table(4, 0);
             TB_Rang1[1] = Table_4_Rang1_2 = new Table(4, 0);
             TB_Rang1[2] = Table_4_Rang1_3 = new Table(4, 0);
             TB_Rang1[3] = Table_4_Rang1_4 = new Table(4, 0);
             Rang1 = new Rang(SR_1, CR_1, TB_Rang1);
 
+            TB_Rang2 = new Table[4];
             TB_Rang2[0] = Table_4_Rang_2_1 = new Table(4, 0);
             TB_Rang2[1] = Table_4_Rang_2_2 = new Table(4, 0);
             TB_Rang2[2] = Table_4_Rang_2_3 = new Table(4, 0);
@@ -80,11 +82,13 @@ namespace Salle_Programme
 
             Carre1 = new Carre(Rang1, Rang2);
 
+            TB_Rang3 = new Table[3];
             TB_Rang3[0] = Table_8_Rang3_1 = new Table(8, 0);
             TB_Rang3[1] = Table_4_Rang3_2 = new Table(4, 0);
             TB_Rang3[2] = Table_8_Rang3_3 = new Table(8, 0);
             Rang3 = new Rang(SR_3, CR_3, TB_Rang3);
 
+            TB_Rang4 = new Table[3];
             TB_Rang4[0] = Table_4_Rang_4_1 = new Table(4, 0);
             TB_Rang4[1] = Table_8_Rang_4_2 = new Table(8, 0);
             TB_Rang4[2] = Table_4_Rang_4_3 = new Table(4, 0);
@@ -92,8 +96,20 @@ namespace Salle_Programme
 
             Carre2 = new Carre(Rang3, Rang4);
 
+            Presentoire = new PresentoireSalle();
             Salle = Salle.GetInstance(Carre1, Carre2, MH, CS,Presentoire);
+
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CMD = new String[2];
+            CMD[0] = "Pates";
+            CMD[1] = "Pizza";
+            Groupe_test = new Clients(2, false, "presse", CMD);
+            MH.AttribueTable(Salle, Groupe_test,false);
+
         }
     }
 }

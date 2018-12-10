@@ -12,6 +12,8 @@ public class Clients
         this.NBClients = NBClients;
         this.IsReserved = IsReserved;
         this.Commandes = Commandes;
+        this.Reservation = null;
+
     }
 
     private String Humeur;
@@ -21,7 +23,28 @@ public class Clients
 
     private Boolean IsReserved;
 
+    private Reservation Reservation;
+
     private String[] Commandes;
+
+    public Reservation GetIsReservation()
+    {
+        return this.Reservation;
+    }
+
+    public void SetIsReservation(Reservation Resa)
+    {
+        this.Reservation = Resa;
+    }
+    public Boolean GetIsReserved()
+    {
+        return this.IsReserved;
+    }
+
+    public void SetIsReserved (Boolean State)
+    {
+        this.IsReserved = State;
+    }
 
     public int GetNBClients()
     {
