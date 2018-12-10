@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Carre.cs" />
     <Compile Include="ChefRang.cs" />
+    <Compile Include="Clients.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="CommisSalle.cs" />
     <Compile Include="Strategy.cs" />

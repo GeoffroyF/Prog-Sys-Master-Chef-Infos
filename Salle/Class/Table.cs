@@ -14,6 +14,8 @@ public class Table {
         HasEau = false;
     }
 
+    private Clients Clients;
+
     private int NombreChaises;
 
     private int NombrePersonnes;
@@ -27,6 +29,18 @@ public class Table {
     private string[] Plats;
 
     //public Reservation Reservation = new Reservation (false, true);
+
+
+
+    public Clients GetClients ()
+    {
+        return this.Clients;
+    }
+    
+    public void SetClients (Clients Clients)
+    {
+        this.Clients = Clients;
+    }
 
     /// <summary>
     /// 
