@@ -1,0 +1,14 @@
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (2, 'AssietesEntre', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (3, 'Assiettesplates', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (4, 'AssiettesCreuses', 30, 30, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (5, 'AssiettesDesserts', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (6, 'Fourchettes', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (7, 'Couteaux', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (8, 'CuillieresSoupes', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (9, 'CuillieresCafe', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (10, 'VerresEau', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (11, 'VerresVin', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (12, 'VerresFlutes', 150, 150, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (14, 'Cafe', 50, 50, 0, 0, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (15, 'Serviettes', 150, 150, 0, 1, null);
+INSERT INTO restaurant.dbo.COUVERTS (id, nom, nb_total, nb_propre, nb_sale, type, id_TABLE) VALUES (16, 'Nappes', 40, 40, 0, 1, null);
