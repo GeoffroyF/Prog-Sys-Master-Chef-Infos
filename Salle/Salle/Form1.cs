@@ -116,6 +116,8 @@ namespace WinForm
 
 
         }
+
+       
         private void Service (Boolean MatinMidi)
         {
             //
@@ -230,29 +232,29 @@ namespace WinForm
            
             //Instanciation Groupe Clients
 
-            CMD = new String[ this.comboBox9.SelectedIndex ];
+            CMD = new String[ this.comboBox9.SelectedIndex+1 ];
 
             for(int i =0; i< this.comboBox9.SelectedIndex ; i++)
             {
                 switch (i)
                 {
                     case 0:
-                        CMD[0] = this.comboBox2.SelectedText;
+                        CMD[0] = (this.comboBox2.SelectedItem).ToString();
                         break;
                     case 1:
-                        CMD[1] = this.comboBox3.SelectedText;
+                        CMD[1] = (this.comboBox3.SelectedItem).ToString();
                         break;
                     case 2:
-                        CMD[2] = this.comboBox4.SelectedText;
+                        CMD[2] = (this.comboBox4.SelectedItem).ToString();
                         break;
                     case 3:
-                        CMD[3] = this.comboBox5.SelectedText;
+                        CMD[3] = (this.comboBox5.SelectedItem).ToString();
                         break;
                     case 4:
-                        CMD[4] = this.comboBox6.SelectedText;
+                        CMD[4] = (this.comboBox6.SelectedItem).ToString();
                         break;
                     case 5:
-                        CMD[5] = this.comboBox7.SelectedText;
+                        CMD[5] = (this.comboBox7.SelectedItem).ToString();
                         break;
                     default:
                         break;
@@ -283,40 +285,101 @@ namespace WinForm
         private void button5_Click(object sender, EventArgs e)
         {
             //Groupe_test.
-            if(Table_test.GetId() <5)
+            string[] CMD = Groupe_test.GetCommandes();
+            if (Table_test.GetId() <5)
             {
                 SR_1.Debarasse(Table_test);
+
+                switch (Table_test.GetId())
+                {
+                    case 1:
+                        this.ClientMnge_Tab_1.Text = "Debarassé";
+                        break;
+                    case 2:
+                        this.ClientMnge_Tab_2.Text = "Debarassé";
+                        break;
+                    case 3:
+                        this.ClientMnge_Tab_3.Text = "Debarassé";
+                        break;
+                    case 4:
+                        this.ClientMnge_Tab_4.Text = "Debarassé";
+                        break;
+                }
+
                 foreach (string S in CMD)
                 {
-                    Chiffre += SR_4.Addition();
+                    this.Chiffre += SR_4.Addition();
                 }
             }
             else if(Table_test.GetId() < 9)
             {
                 SR_2.Debarasse(Table_test);
+
+                switch(Table_test.GetId())
+                {
+                    case 5:
+                        this.ClientMnge_Tab_2_1.Text = "Debarassé";
+                        break;
+                    case 6:
+                        this.ClientMnge_Tab_2_2.Text = "Debarassé";
+                        break;
+                    case 7:
+                        this.ClientMnge_Tab_2_3.Text = "Debarassé";
+                        break;
+                    case 8:
+                        this.ClientMnge_Tab_2_4.Text = "Debarassé";
+                        break;
+                }
+
                 foreach (string S in CMD)
                 {
-                    Chiffre += SR_4.Addition();
+                    this.Chiffre += SR_4.Addition();
                 }
             }
             else if(Table_test.GetId() < 12)
             {
                 SR_3.Debarasse(Table_test);
+                switch(Table_test.GetId())
+                {
+                    case 9:
+                        this.ClientMnge_Tab_3_1.Text = "Debarassé";
+                        break;
+                    case 10:
+                        this.ClientMnge_Tab_3_2.Text = "Debarassé";
+                        break;
+                    case 11:
+                        this.ClientMnge_Tab_3_3.Text = "Debarassé";
+                        break;
+                }
+
+
                 foreach (string S in CMD)
                 {
-                    Chiffre += SR_4.Addition();
+                    this.Chiffre += SR_4.Addition();
                 }
             }
             else
             {
                 SR_4.Debarasse(Table_test);
+                switch(Table_test.GetId())
+                {
+                    case 12:
+                        this.ClientMnge_Tab_4_1.Text = "Debarassé";
+                        break;
+                    case 13:
+                        this.ClientMnge_Tab_4_2.Text = "Debarassé";
+                        break;
+                    case 14:
+                        this.ClientMnge_Tab_4_3.Text = "Debarassé";
+                        break;
+                }
                 foreach (string S in CMD)
                 {
                     Chiffre += SR_4.Addition();
                 }
             }
 
-            this.label10.Text = Chiffre.ToString() + "€";
+            this.label10.Text = Chiffre.ToString()+"€";
 
 
 
@@ -413,14 +476,82 @@ namespace WinForm
             //SR_1.AmenerSale();
 
             Groupe_test.SetServi(true);
-            this.ClientMnge_Tab_1.Text = "Servi";
-            this.ClientMnge_Tab_1.ForeColor = System.Drawing.Color.Green;
 
+
+            MAJ_Client_Table2(Table_test);
+
+
+            this.button5.Visible = true;
             //demmarrer un timer en fn humeur
             //Barre de progression ?
             //lorsque fin timer
 
             //SR_1.Debarrasse (Table)
+        }
+
+        private void MAJ_Client_Table2(Table Test)
+        {
+            switch (Test.GetId())
+            {
+                case 1:
+                    this.ClientMnge_Tab_1.Text = "Servi";
+                    this.ClientMnge_Tab_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 2:
+                    this.ClientMnge_Tab_2.Text = "Servi";
+                    this.ClientMnge_Tab_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 3:
+                    this.ClientMnge_Tab_3.Text = "Servi";
+                    this.ClientMnge_Tab_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 4:
+                    this.ClientMnge_Tab_4.Text = "Servi";
+                    this.ClientMnge_Tab_4.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 5:
+                    this.ClientMnge_Tab_2_1.Text = "Servi";
+                    this.ClientMnge_Tab_2_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 6:
+                    this.ClientMnge_Tab_2_2.Text = "Servi";
+                    this.ClientMnge_Tab_2_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 7:
+                    this.ClientMnge_Tab_2_3.Text = "Servi";
+                    this.ClientMnge_Tab_2_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 8:
+                    this.ClientMnge_Tab_3_1.Text = "Servi";
+                    this.ClientMnge_Tab_3_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 9:
+                    this.ClientMnge_Tab_3_2.Text = "Servi";
+                    this.ClientMnge_Tab_3_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 10:
+                    this.ClientMnge_Tab_3_3.Text = "Servi";
+                    this.ClientMnge_Tab_3_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 11:
+                    this.ClientMnge_Tab_4_1.Text = "Servi";
+                    this.ClientMnge_Tab_4_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 12:
+                    this.ClientMnge_Tab_4_2.Text = "Servi";
+                    this.ClientMnge_Tab_4_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 13:
+                    this.ClientMnge_Tab_4_3.Text = "Servi";
+                    this.ClientMnge_Tab_4_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 14:
+                    this.ClientMnge_Tab_1.Text = "Servi";
+                    this.ClientMnge_Tab_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+
+
+            }
         }
     }
 }
