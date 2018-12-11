@@ -43,15 +43,16 @@
   <ItemGroup>
     <Compile Include="Carre.cs" />
     <Compile Include="ChefRang.cs" />
+    <Compile Include="Clients.cs" />
     <Compile Include="Commande.cs" />
     <Compile Include="CommisSalle.cs" />
-    <Compile Include="CommunicationSalleCuisine.cs" />
     <Compile Include="Strategy.cs" />
     <Compile Include="MaitreHotel.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="PersonnelCuisine.cs" />
     <Compile Include="PresentoireSalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+	<Compile Include="CommunicationSalleCuisine.cs" />
     <Compile Include="Rang.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="Salle.cs" />

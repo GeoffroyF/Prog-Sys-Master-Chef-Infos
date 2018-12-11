@@ -6,8 +6,6 @@ using System.Text;
 
 public class PresentoireSalle : Sujet {
 
-    
-
     public PresentoireSalle() {
     }
 

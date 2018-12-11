@@ -21,7 +21,15 @@ public class ChefRang : PersonnelCuisine {
     /// 
     /// @param Table
     /// </summary>
-    public void PlaceClient(Table Table) {
+    public void PlaceClient(Table Table, Clients Clients) {
+        //MAJ table
+        Table.SetNombrePersonnes(Clients.GetNBClients());
+        Table.SetClients(Clients);
+
+        //MAJ clients
+        //APPELLE PREND commande
+        this.PrendCommande(Table);
+        
     }
 
     /// <summary>
@@ -46,6 +54,16 @@ public class ChefRang : PersonnelCuisine {
     /// @param Table
     /// </summary>
     public void PrendCommande(Table Table) {
+        Clients Cli = null;
+        string[] Commande = null;
+
+        Cli = Table.GetClients();
+        Commande = Cli.GetCommandes();
+
+        //recup commande
+        //la transmet en cuisine
+        //Apporte pain et eau
+
     }
 
 }

@@ -5,7 +5,11 @@ using System.Linq;
 using System.Text;
 
 
-public class Salle : PresentoireSalle {
+//public class Salle : PresentoireSalle
+
+
+
+    public class Salle {
 
     private Salle(Carre CarreUn, Carre CarreDeux, MaitreHotel MaitreHotel, CommisSalle Commis, PresentoireSalle PresentoireSalle) {
         this.CarreUn = CarreUn;
@@ -26,6 +30,8 @@ public class Salle : PresentoireSalle {
     private MaitreHotel MaitreHotel;
 
     private CommisSalle Commis;
+
+    public DateTime Date;
 
     
 
@@ -78,4 +84,16 @@ public class Salle : PresentoireSalle {
         return Salle.instance;
     }
 
+    public void Service(Boolean Midi_Soir)
+    {
+        //false : MIDI ; true : SOIR
+
+        //Regle l'heure
+
+        //Genere les reservations
+
+        //Genere les Clients OU 
+        //Le programme va faire arriver les client
+
+    }
 }
