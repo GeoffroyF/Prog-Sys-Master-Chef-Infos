@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Salle
+namespace WinForm
 {
     static class Program
     {
@@ -19,8 +19,7 @@ namespace Salle
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-
+            Application.Run(new ChefMaster());
         }
 
 

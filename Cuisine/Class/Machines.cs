@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 public class Machines {
 
     public Machines(String nom, int capacite) {
         this.Nom = nom;
         this.Capacite = capacite;
+        this.Semaphores = new Semaphore(1, 1);
     }
 
     private DateTime Debut;
@@ -20,6 +22,10 @@ public class Machines {
     private PersonnelCuisine Proprio;
 
     private String Nom;
+
+ 
+
+    private Semaphore Semaphores;
 
     /// <summary>
     /// Function that make the machine run
@@ -53,6 +59,8 @@ public class Machines {
     /// <summary>
     /// Set the time of usage of the machine
     /// </summary>
+    /// 
+
     public void start(int s) {
         if(s == 0)
         {
@@ -60,15 +68,20 @@ public class Machines {
             this.DateFin = new DateTime(1900, 1, 1);
             Console.WriteLine(Debut);
             Console.WriteLine(DateFin);
+            ///semaphore dispo
+            semaphore.Release();
             return;
         }
         else if(s > 0)
         {
+            semaphore.WaitOne();
             this.Debut = DateTime.Now;
             this.DateFin = Debut.AddSeconds(s);
+
             return;
         }
         throw new System.ArgumentException("Argument error");
+
     }
 
     /// <summary>
@@ -80,7 +93,9 @@ public class Machines {
     {
         if(this.DateFin < DateTime.Now)
         {
+            Semaphores.Release();
             return false;
+           
         }
         else
         {
