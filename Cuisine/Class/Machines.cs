@@ -23,7 +23,6 @@ public class Machines {
 
     private String Nom;
 
- 
 
     private Semaphore Semaphores;
 
@@ -61,7 +60,7 @@ public class Machines {
     /// </summary>
     /// 
 
-    public void start(int s) {
+    public int start(int s) {
         if(s == 0)
         {
             this.Debut = DateTime.Now;
@@ -69,16 +68,16 @@ public class Machines {
             Console.WriteLine(Debut);
             Console.WriteLine(DateFin);
             ///semaphore dispo
-            semaphore.Release();
-            return;
+            Semaphores.Release();
+            return 0;
         }
         else if(s > 0)
         {
-            semaphore.WaitOne();
+            Semaphores.WaitOne();
             this.Debut = DateTime.Now;
             this.DateFin = Debut.AddSeconds(s);
-
-            return;
+            Console.WriteLine("This stuff is here");
+            return 1;
         }
         throw new System.ArgumentException("Argument error");
 
