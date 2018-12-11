@@ -16,6 +16,7 @@ public class Clients
         this.Servi = false;
     }
 
+
     private String Humeur;
     //Presse, trql, autre
 
@@ -28,6 +29,7 @@ public class Clients
     private String[] Commandes;
 
     private Boolean Servi;
+
 
     public Boolean GetServi()
     {

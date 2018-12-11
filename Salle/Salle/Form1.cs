@@ -44,6 +44,7 @@ namespace WinForm
         private String[] CMD;
 
         private Clients Groupe_test;
+
         private Table Table_test;
 
 
@@ -69,31 +70,31 @@ namespace WinForm
             //Instanciation Salle
 
             TB_Rang1 = new Table[4];
-            TB_Rang1[0] = Table_4_Rang1_1 = new Table(4, 0);
-            TB_Rang1[1] = Table_4_Rang1_2 = new Table(4, 0);
-            TB_Rang1[2] = Table_4_Rang1_3 = new Table(4, 0);
-            TB_Rang1[3] = Table_4_Rang1_4 = new Table(4, 0);
+            TB_Rang1[0] = Table_4_Rang1_1 = new Table(4, 0, 1);
+            TB_Rang1[1] = Table_4_Rang1_2 = new Table(4, 0, 2);
+            TB_Rang1[2] = Table_4_Rang1_3 = new Table(4, 0, 3);
+            TB_Rang1[3] = Table_4_Rang1_4 = new Table(4, 0, 4);
             Rang1 = new Rang(SR_1, CR_1, TB_Rang1);
 
             TB_Rang2 = new Table[4];
-            TB_Rang2[0] = Table_4_Rang_2_1 = new Table(4, 0);
-            TB_Rang2[1] = Table_4_Rang_2_2 = new Table(4, 0);
-            TB_Rang2[2] = Table_4_Rang_2_3 = new Table(4, 0);
-            TB_Rang2[3] = Table_4_Rang_2_4 = new Table(4, 0);
+            TB_Rang2[0] = Table_4_Rang_2_1 = new Table(4, 0, 5);
+            TB_Rang2[1] = Table_4_Rang_2_2 = new Table(4, 0, 6);
+            TB_Rang2[2] = Table_4_Rang_2_3 = new Table(4, 0, 7);
+            TB_Rang2[3] = Table_4_Rang_2_4 = new Table(4, 0, 8);
             Rang2 = new Rang(SR_2, CR_2, TB_Rang2);
 
             Carre1 = new Carre(Rang1, Rang2);
 
             TB_Rang3 = new Table[3];
-            TB_Rang3[0] = Table_8_Rang3_1 = new Table(8, 0);
-            TB_Rang3[1] = Table_4_Rang3_2 = new Table(4, 0);
-            TB_Rang3[2] = Table_8_Rang3_3 = new Table(8, 0);
+            TB_Rang3[0] = Table_8_Rang3_1 = new Table(8, 0, 9);
+            TB_Rang3[1] = Table_4_Rang3_2 = new Table(4, 0, 10);
+            TB_Rang3[2] = Table_8_Rang3_3 = new Table(8, 0, 11);
             Rang3 = new Rang(SR_3, CR_3, TB_Rang3);
 
             TB_Rang4 = new Table[3];
-            TB_Rang4[0] = Table_4_Rang_4_1 = new Table(4, 0);
-            TB_Rang4[1] = Table_8_Rang_4_2 = new Table(8, 0);
-            TB_Rang4[2] = Table_4_Rang_4_3 = new Table(4, 0);
+            TB_Rang4[0] = Table_4_Rang_4_1 = new Table(4, 0, 12);
+            TB_Rang4[1] = Table_8_Rang_4_2 = new Table(8, 0, 13);
+            TB_Rang4[2] = Table_4_Rang_4_3 = new Table(4, 0, 14);
             Rang4 = new Rang(SR_3, CR_3, TB_Rang3);
 
             Carre2 = new Carre(Rang3, Rang4);
@@ -226,31 +227,180 @@ namespace WinForm
 
         private void ArriveCli_Click(object sender, EventArgs e)
         {
+           
             //Instanciation Groupe Clients
-            CMD = new String[2];
-            CMD[0] = "Pates";
-            CMD[1] = "Pizza";
-            Groupe_test = new Clients(2, false, "presse", CMD);
+
+            CMD = new String[ this.comboBox9.SelectedIndex ];
+
+            for(int i =0; i< this.comboBox9.SelectedIndex ; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        CMD[0] = this.comboBox2.SelectedText;
+                        break;
+                    case 1:
+                        CMD[1] = this.comboBox3.SelectedText;
+                        break;
+                    case 2:
+                        CMD[2] = this.comboBox4.SelectedText;
+                        break;
+                    case 3:
+                        CMD[3] = this.comboBox5.SelectedText;
+                        break;
+                    case 4:
+                        CMD[4] = this.comboBox6.SelectedText;
+                        break;
+                    case 5:
+                        CMD[5] = this.comboBox7.SelectedText;
+                        break;
+                    default:
+                        break;
+                   
+                }
+            }
+            //CMD[0] = "Pates";
+            //CMD[1] = "Pizza";
+            Groupe_test = new Clients(this.comboBox9.SelectedIndex+1, false, this.comboBox8.SelectedText, CMD);
 
             //Acceuill, Attribution, placement clients & prise de commande
             //Apport eau et pains
 
             //deplacer groupe cli vers MH
-            this.ClientIMG.Location = new Point(111,360);
+            //this.ClientIMG.Location = new Point(111,360);
 
 
             Table_test = MH.AttribueTable(Salle, Groupe_test, false);
+            
+            MAJ_Client_Table(Table_test);
 
-            //Deplacer groupe cli vers table concerne
-            this.ClientIMG.Location = new Point(304, 482);
 
-            //MAJ indicateur table concerne
 
-            this.NBpers_Tab1.Text = Groupe_test.GetNBClients().ToString();
-            //NB clients
-            this.PainEau_Tab1.ForeColor = System.Drawing.Color.Green;
 
             this.button2.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Groupe_test.
+            if(Table_test.GetId() <5)
+            {
+                SR_1.Debarasse(Table_test);
+                foreach (string S in CMD)
+                {
+                    Chiffre += SR_4.Addition();
+                }
+            }
+            else if(Table_test.GetId() < 9)
+            {
+                SR_2.Debarasse(Table_test);
+                foreach (string S in CMD)
+                {
+                    Chiffre += SR_4.Addition();
+                }
+            }
+            else if(Table_test.GetId() < 12)
+            {
+                SR_3.Debarasse(Table_test);
+                foreach (string S in CMD)
+                {
+                    Chiffre += SR_4.Addition();
+                }
+            }
+            else
+            {
+                SR_4.Debarasse(Table_test);
+                foreach (string S in CMD)
+                {
+                    Chiffre += SR_4.Addition();
+                }
+            }
+
+            this.label10.Text = Chiffre.ToString() + "€";
+
+
+
+        }
+
+
+
+        private void MAJ_Client_Table (Table Test)
+        {
+            switch(Test.GetId())
+            {
+                case 1:
+                    this.ClientIMG.Location = new Point(304, 482);
+                    this.NBpers_Tab1.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 2:
+                    this.ClientIMG.Location = new Point(428, 468);
+                    this.NBpers_Tab2.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 3:
+                    this.ClientIMG.Location = new Point(567, 468);
+                    this.NBpers_Tab3.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 4:
+                    this.ClientIMG.Location = new Point(693, 437);
+                    this.NBpers_Tab4.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab4.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 5:
+                    this.ClientIMG.Location = new Point(304, 642);
+                    this.NBpers_Tab2_1.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab2_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 6:
+                    this.ClientIMG.Location = new Point(437, 575);
+                    this.NBpers_Tab2_2.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab2_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 7:
+                    this.ClientIMG.Location = new Point(565, 641);
+                    this.NBpers_Tab2_3.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab2_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 8:
+                    this.ClientIMG.Location = new Point(685, 575);
+                    this.NBpers_Tab2_4.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab2_4.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 9:
+                    this.ClientIMG.Location = new Point(846, 446);
+                    this.NBpers_Tab3_1.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab3_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 10:
+                    this.ClientIMG.Location = new Point(839, 638);
+                    this.NBpers_Tab3_2.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab3_2.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 11:
+                    this.ClientIMG.Location = new Point(991, 584);
+                    this.NBpers_Tab3_3.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab3_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 12:
+                    this.ClientIMG.Location = new Point(1139, 638);
+                    this.NBpers_Tab4_1.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab4_1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 13:
+                    this.ClientIMG.Location = new Point(304, 482);
+                    this.NBpers_Tab4_2.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab1.ForeColor = System.Drawing.Color.Green;
+                    break;
+                case 14:
+                    this.ClientIMG.Location = new Point(304, 482);
+                    this.NBpers_Tab4_3.Text = Groupe_test.GetNBClients().ToString();
+                    this.PainEau_Tab4_3.ForeColor = System.Drawing.Color.Green;
+                    break;
+
+                
+            }
         }
 
 

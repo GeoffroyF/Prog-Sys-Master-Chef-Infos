@@ -7,16 +7,19 @@ using System.Text;
 public class Table
 {
 
-    public Table(int NombreChaises, int NombrePersonnes)
+    public Table(int NombreChaises, int NombrePersonnes, int id)
     {
         this.NombreChaises = NombreChaises;
         this.NombrePersonnes = NombrePersonnes;
+        this.id= id;
         IsReserved = false;
         HasPain = false;
         HasEau = false;
     }
 
     private Clients Clients;
+
+    private int id;
 
     private int NombreChaises;
 
@@ -32,7 +35,15 @@ public class Table
 
     //public Reservation Reservation = new Reservation (false, true);
 
+    public int GetId()
+    {
+        return this.id;
+    }
 
+    public void SetId(int ID)
+    {
+        this.id = ID;
+    }
 
     public Clients GetClients()
     {

@@ -39,8 +39,6 @@
             this.Minutes = new System.Windows.Forms.TextBox();
             this.Jour = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Ajouter = new System.Windows.Forms.Button();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.ClientIMG = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -112,6 +110,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientIMG)).BeginInit();
@@ -211,23 +211,6 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(1434, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // Ajouter
-            // 
-            this.Ajouter.Location = new System.Drawing.Point(1328, 31);
-            this.Ajouter.Name = "Ajouter";
-            this.Ajouter.Size = new System.Drawing.Size(75, 23);
-            this.Ajouter.TabIndex = 10;
-            this.Ajouter.Text = "Ajouter";
-            this.Ajouter.UseVisualStyleBackColor = true;
-            this.Ajouter.Click += new System.EventHandler(this.Ajouter_Click);
-            // 
             // trackBar2
             // 
             this.trackBar2.LargeChange = 1;
@@ -244,7 +227,7 @@
             // 
             this.ClientIMG.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientIMG.Image = ((System.Drawing.Image)(resources.GetObject("ClientIMG.Image")));
-            this.ClientIMG.Location = new System.Drawing.Point(37, 584);
+            this.ClientIMG.Location = new System.Drawing.Point(157, 299);
             this.ClientIMG.Margin = new System.Windows.Forms.Padding(2);
             this.ClientIMG.Name = "ClientIMG";
             this.ClientIMG.Size = new System.Drawing.Size(56, 67);
@@ -254,7 +237,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 675);
+            this.button1.Location = new System.Drawing.Point(76, 675);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 37);
@@ -266,7 +249,7 @@
             // MaitreHote
             // 
             this.MaitreHote.Image = ((System.Drawing.Image)(resources.GetObject("MaitreHote.Image")));
-            this.MaitreHote.Location = new System.Drawing.Point(123, 287);
+            this.MaitreHote.Location = new System.Drawing.Point(88, 299);
             this.MaitreHote.Margin = new System.Windows.Forms.Padding(2);
             this.MaitreHote.Name = "MaitreHote";
             this.MaitreHote.Size = new System.Drawing.Size(38, 67);
@@ -768,7 +751,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 408);
+            this.label2.Location = new System.Drawing.Point(23, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 63;
@@ -784,9 +767,9 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox2.Location = new System.Drawing.Point(183, 479);
+            this.comboBox2.Location = new System.Drawing.Point(105, 476);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(70, 21);
+            this.comboBox2.Size = new System.Drawing.Size(135, 21);
             this.comboBox2.TabIndex = 65;
             // 
             // comboBox3
@@ -799,9 +782,9 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox3.Location = new System.Drawing.Point(183, 514);
+            this.comboBox3.Location = new System.Drawing.Point(105, 511);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(70, 21);
+            this.comboBox3.Size = new System.Drawing.Size(135, 21);
             this.comboBox3.TabIndex = 66;
             // 
             // comboBox4
@@ -814,9 +797,9 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox4.Location = new System.Drawing.Point(183, 546);
+            this.comboBox4.Location = new System.Drawing.Point(105, 543);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(70, 21);
+            this.comboBox4.Size = new System.Drawing.Size(135, 21);
             this.comboBox4.TabIndex = 67;
             // 
             // comboBox5
@@ -829,9 +812,9 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox5.Location = new System.Drawing.Point(183, 578);
+            this.comboBox5.Location = new System.Drawing.Point(105, 575);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(70, 21);
+            this.comboBox5.Size = new System.Drawing.Size(135, 21);
             this.comboBox5.TabIndex = 68;
             // 
             // comboBox6
@@ -844,9 +827,9 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox6.Location = new System.Drawing.Point(183, 614);
+            this.comboBox6.Location = new System.Drawing.Point(105, 611);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(70, 21);
+            this.comboBox6.Size = new System.Drawing.Size(135, 21);
             this.comboBox6.TabIndex = 69;
             // 
             // comboBox7
@@ -859,15 +842,15 @@
             "Boles de picoulats",
             "Blanquette de veau",
             "Gaspatcho"});
-            this.comboBox7.Location = new System.Drawing.Point(183, 646);
+            this.comboBox7.Location = new System.Drawing.Point(105, 643);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(70, 21);
+            this.comboBox7.Size = new System.Drawing.Size(135, 21);
             this.comboBox7.TabIndex = 70;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 445);
+            this.label3.Location = new System.Drawing.Point(28, 442);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 71;
@@ -879,9 +862,9 @@
             this.comboBox8.Items.AddRange(new object[] {
             "Cool (1h)",
             "Presse (30min)"});
-            this.comboBox8.Location = new System.Drawing.Point(183, 445);
+            this.comboBox8.Location = new System.Drawing.Point(105, 442);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(70, 21);
+            this.comboBox8.Size = new System.Drawing.Size(135, 21);
             this.comboBox8.TabIndex = 72;
             // 
             // comboBox9
@@ -894,15 +877,15 @@
             "4",
             "5",
             "6"});
-            this.comboBox9.Location = new System.Drawing.Point(183, 405);
+            this.comboBox9.Location = new System.Drawing.Point(105, 402);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(70, 21);
+            this.comboBox9.Size = new System.Drawing.Size(135, 21);
             this.comboBox9.TabIndex = 73;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(119, 482);
+            this.label4.Location = new System.Drawing.Point(45, 479);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 74;
@@ -911,53 +894,75 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 517);
+            this.label5.Location = new System.Drawing.Point(45, 514);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 75;
-            this.label5.Text = "Choix 1";
+            this.label5.Text = "Choix 2";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(119, 549);
+            this.label6.Location = new System.Drawing.Point(45, 546);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 76;
-            this.label6.Text = "Choix 1";
+            this.label6.Text = "Choix 3";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(119, 584);
+            this.label7.Location = new System.Drawing.Point(45, 581);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 77;
-            this.label7.Text = "Choix 1";
+            this.label7.Text = "Choix 4";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(119, 617);
+            this.label8.Location = new System.Drawing.Point(45, 614);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 78;
-            this.label8.Text = "Choix 1";
+            this.label8.Text = "Choix 5";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(124, 649);
+            this.label9.Location = new System.Drawing.Point(50, 646);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 13);
             this.label9.TabIndex = 79;
-            this.label9.Text = "Choix 1";
+            this.label9.Text = "Choix 6";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(828, 242);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(117, 45);
+            this.button5.TabIndex = 80;
+            this.button5.Text = "Repas Terminé";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1371, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 31);
+            this.label10.TabIndex = 81;
+            this.label10.Text = "0 €";
             // 
             // ChefMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1587, 794);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -1029,8 +1034,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ClientIMG);
             this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.Ajouter);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Jour);
             this.Controls.Add(this.Minutes);
             this.Controls.Add(this.Seconde);
@@ -1084,8 +1087,6 @@
         private System.Windows.Forms.TextBox Minutes;
         private System.Windows.Forms.TextBox Jour;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button Ajouter;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.PictureBox ClientIMG;
         private System.Windows.Forms.Button button1;
@@ -1157,6 +1158,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label10;
     }
 }
 

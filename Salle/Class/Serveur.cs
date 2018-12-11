@@ -60,7 +60,7 @@ public class Serveur : PersonnelCuisine
     /// <summary>
     /// @param Commande
     /// </summary>
-    public int Addition(Commande Commande)
+    public int Addition()
     {
         return 10;
     }
