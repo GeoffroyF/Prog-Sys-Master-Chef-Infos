@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Users\1716126\Downloads\mysql-connector-dotnet\mysql-connector.net\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>C:\Users\1716126\Downloads\mysql-connector-dotnet\mysql-connector.net\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>C:\Users\1716126\Downloads\mysql-connector-dotnet\mysql-connector.net\MySql.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
