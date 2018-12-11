@@ -37,6 +37,15 @@ namespace Test
             MachineUn.start(60);
             Assert.AreEqual(MachineUn.isRunning(), true, "The machine is not running");
         }
+        [TestMethod]
+        public void IsSemaphoreWorking()
+        {
+            int a = MachineUn.start(60);
+            int b = MachineUn.start(20);
+            Assert.AreNotEqual(a, b, "The semaphore works");
+            //Assert.AreEqual(MachineUn.isRunning(), true, "The machine is not running");
+
+        }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException), "Argument error")]

@@ -22,6 +22,7 @@ namespace Class
         public CommunicationSalleCuisine()
         {
             Thread th = new Thread(run_communication);
+            th.Start();
             sender.Connect(remoteEP);
         }
 
@@ -30,8 +31,13 @@ namespace Class
             
             while (true)
             {
-                int bytesRec = sender.Receive(bytes);
-                Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                try
+                {
+                    int bytesRec = sender.Receive(bytes);
+                    Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                }
+                catch { }
+                
             }
             
         }

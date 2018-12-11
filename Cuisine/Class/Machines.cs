@@ -23,7 +23,6 @@ public class Machines {
 
     private String Nom;
 
- 
 
     private Semaphore Semaphores;
 
@@ -61,7 +60,7 @@ public class Machines {
     /// </summary>
     /// 
 
-    public void start(int s) {
+    public int start(int s) {
         if(s == 0)
         {
             this.Debut = DateTime.Now;
