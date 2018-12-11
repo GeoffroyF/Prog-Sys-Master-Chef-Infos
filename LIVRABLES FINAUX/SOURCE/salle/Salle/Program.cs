@@ -20,12 +20,12 @@ namespace WinForm
         //[STAThread]
         static void Main()
         {
-            CommunicationSalleCuisine CS = new CommunicationSalleCuisine();
-            CS.SendCommande();
-            Console.ReadLine();
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new ChefMaster());
+            //CommunicationSalleCuisine CS = new CommunicationSalleCuisine();
+            //CS.SendCommande();
+            //Console.ReadLine();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ChefMaster());
         }
 
 
