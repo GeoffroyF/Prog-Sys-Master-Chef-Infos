@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ChefRang : PersonnelCuisine {
+public class ChefRang : PersonnelCuisine
+{
 
-    public ChefRang(String Nom, String Prenom) : base (Nom, Prenom) {
+    public ChefRang(String Nom, String Prenom) : base(Nom, Prenom)
+    {
         Rang = null;
     }
 
     //private String Nom;
 
     //private String Prenom;
-    
+
     private Rang Rang;
 
     /// <summary>
@@ -21,7 +23,8 @@ public class ChefRang : PersonnelCuisine {
     /// 
     /// @param Table
     /// </summary>
-    public void PlaceClient(Table Table, Clients Clients) {
+    public void PlaceClient(Table Table, Clients Clients)
+    {
         //MAJ table
         Table.SetNombrePersonnes(Clients.GetNBClients());
         Table.SetClients(Clients);
@@ -29,7 +32,7 @@ public class ChefRang : PersonnelCuisine {
         //MAJ clients
         //APPELLE PREND commande
         this.PrendCommande(Table);
-        
+
     }
 
     /// <summary>
@@ -44,7 +47,8 @@ public class ChefRang : PersonnelCuisine {
     /// 
     /// </summary>
 
-    public Rang GetRang() {
+    public Rang GetRang()
+    {
         return this.Rang;
     }
 
@@ -53,7 +57,8 @@ public class ChefRang : PersonnelCuisine {
     /// 
     /// @param Table
     /// </summary>
-    public void PrendCommande(Table Table) {
+    public void PrendCommande(Table Table)
+    {
         Clients Cli = null;
         string[] Commande = null;
 
@@ -63,6 +68,17 @@ public class ChefRang : PersonnelCuisine {
         //recup commande
         //la transmet en cuisine
         //Apporte pain et eau
+        if (Table.GetHasEau() == false)
+        {
+            Table.SetHasEau(true);
+        }
+
+        if (Table.GetHasPain() == false)
+        {
+            Table.SetHasPain(true);
+        }
+
+
 
     }
 
