@@ -67,17 +67,16 @@ public class Machines {
             this.DateFin = new DateTime(1900, 1, 1);
             Console.WriteLine(Debut);
             Console.WriteLine(DateFin);
-            ///semaphore dispo
-            Semaphores.Release();
-            return 0;
+            return;
         }
         else if(s > 0)
         {
             Semaphores.WaitOne();
             this.Debut = DateTime.Now;
             this.DateFin = Debut.AddSeconds(s);
-            Console.WriteLine("This stuff is here");
-            return 1;
+            Thread.Sleep(s*1000);
+            Semaphores.Release();
+            return;
         }
         throw new System.ArgumentException("Argument error");
 
