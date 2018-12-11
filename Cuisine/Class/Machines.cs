@@ -68,16 +68,15 @@ public class Machines {
             this.DateFin = new DateTime(1900, 1, 1);
             Console.WriteLine(Debut);
             Console.WriteLine(DateFin);
-            ///semaphore dispo
-            semaphore.Release();
             return;
         }
         else if(s > 0)
         {
-            semaphore.WaitOne();
+            Semaphores.WaitOne();
             this.Debut = DateTime.Now;
             this.DateFin = Debut.AddSeconds(s);
-
+            Thread.Sleep(s*1000);
+            Semaphores.Release();
             return;
         }
         throw new System.ArgumentException("Argument error");
