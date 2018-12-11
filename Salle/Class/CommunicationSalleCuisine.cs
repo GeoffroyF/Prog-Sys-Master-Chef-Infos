@@ -22,6 +22,7 @@ namespace Class
         public CommunicationSalleCuisine()
         {
             Thread th = new Thread(run_communication);
+            th.Start();
             sender.Connect(remoteEP);
         }
 
