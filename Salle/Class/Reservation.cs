@@ -17,7 +17,6 @@ public class Reservation {
     private Boolean Reserved;
 
     private Table Table;
-
     //L'objet Reservation compose une Table, on l'accede par cette table
 
     //True = Service du Midi

@@ -52,6 +52,7 @@
     <Compile Include="PersonnelCuisine.cs" />
     <Compile Include="PresentoireSalle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+	<Compile Include="CommunicationSalleCuisine.cs" />
     <Compile Include="Rang.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="Salle.cs" />

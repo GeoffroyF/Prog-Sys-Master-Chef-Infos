@@ -63,17 +63,6 @@ public class ChefRang : PersonnelCuisine {
         //recup commande
         //la transmet en cuisine
         //Apporte pain et eau
-        if(Table.GetHasEau() == false)
-        {
-            Table.SetHasEau(true);
-        }
-
-        if (Table.GetHasPain() == false)
-        {
-            Table.SetHasPain(true);
-        }
-
-
 
     }
 

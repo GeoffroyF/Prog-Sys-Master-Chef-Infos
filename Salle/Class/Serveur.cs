@@ -26,16 +26,6 @@ public class Serveur : PersonnelCuisine {
     }
 
     /// <summary>
-    /// Le Serveur debarasse
-    /// </summary>
-
-    public void Debarasse(Table table)
-    {
-        //Transmet aux presentoire salle un nb couvert proportionels a Table.NBpersonnes
-
-    }
-
-    /// <summary>
     /// @param Commande
     /// </summary>
     public void AmenerSucre(Commande Commande) {

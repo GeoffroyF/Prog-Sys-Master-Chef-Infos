@@ -4,9 +4,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Class.Test
 {
     [TestClass]
+
+    
     public class Salle_Test
     {
-        [TestMethod]
+        /*
         public void Test_GetCarreUn()
         {
             //Arrange
@@ -23,23 +25,22 @@ namespace Class.Test
             Table[] Liste_Rang2 = Liste_Rang1;
             Rang Rang2 = new Rang(Serveur_Rang2, ChefRang_Rang2, Liste_Rang2);
 
-            Carre Expected_Carre = new Carre(Rang, Rang2);
-            Carre Carre2 = Expected_Carre;
+            Carre Carre = new Carre(Rang, Rang2);
+            Carre Carre2 = Carre;
 
-        
-            MaitreHotel MH = MaitreHotel.GetInstance("Dupont", "Lucas") ;
-            CommisSalle Commis = CommisSalle.GetInstance ("Pascal", "Henry");
+            MaitreHotel MH = new MaitreHotel ("Dupont", "Lucas") ;
+            CommisSalle Commis = new CommisSalle ("Pascal", "Henry");
             PresentoireSalle Presentoire = new PresentoireSalle ();
 
-            Salle Salle_teste = Salle.GetInstance(Expected_Carre, Carre2, MaitreHotel.GetInstance(), CommisSalle.GetInstance(), Presentoire);
-           
+            Salle Salle_Teste = new Salle (Expected_Carre, Carre2,MH,Commis,Presentoire);
+
             //Action
-            Carre Actual_Carre = Salle_teste.GetCarreUn();
+            Carre Actual_Carre = Salle_Teste.GetCarreUn();
 
             //Assert
             Assert.AreEqual(Actual_Carre, Expected_Carre);
         }
-        /*
+        
         public void Test_GetCarreDeux()
         {
             //Arrange
