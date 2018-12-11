@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Class
 {
-    public class Class1
+    interface Strategy
     {
+        Table GetterSetter_Reservation(Table Table);
     }
 }
