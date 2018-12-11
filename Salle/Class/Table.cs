@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Table {
+public class Table
+{
 
-    public Table(int NombreChaises, int NombrePersonnes) {
+    public Table(int NombreChaises, int NombrePersonnes)
+    {
         this.NombreChaises = NombreChaises;
         this.NombrePersonnes = NombrePersonnes;
         IsReserved = false;
@@ -32,12 +34,12 @@ public class Table {
 
 
 
-    public Clients GetClients ()
+    public Clients GetClients()
     {
         return this.Clients;
     }
-    
-    public void SetClients (Clients Clients)
+
+    public void SetClients(Clients Clients)
     {
         this.Clients = Clients;
     }
@@ -45,35 +47,40 @@ public class Table {
     /// <summary>
     /// 
     /// </summary>
-    public int GetNombreChaises() {
+    public int GetNombreChaises()
+    {
         return this.NombreChaises;
     }
 
     /// <summary>
     /// @param int
     /// </summary>
-    public void SetNombreChaises(int Nbchaises) {
+    public void SetNombreChaises(int Nbchaises)
+    {
         this.NombreChaises = Nbchaises;
     }
 
     /// <summary>
     /// 
     /// </summary>    
-    public int GetNombrePersonnes() {
+    public int GetNombrePersonnes()
+    {
         return this.NombrePersonnes;
     }
 
     /// <summary>
     /// @param int
     /// </summary>   
-    public void SetNombrePersonnes(int NbPersonnes) {
+    public void SetNombrePersonnes(int NbPersonnes)
+    {
         this.NombrePersonnes = NbPersonnes;
     }
 
     /// <summary>
     /// 
     /// </summary>
-    public Boolean GetIsReserved() {
+    public Boolean GetIsReserved()
+    {
         return this.IsReserved;
     }
 
@@ -81,41 +88,48 @@ public class Table {
     /// @param boolean 
     /// Creer un objet reservation lorsque Setté a true
     /// </summary>
-    public void SetIsReserved(Boolean State) {
-        this.IsReserved =  State;
+    public void SetIsReserved(Boolean State)
+    {
+        this.IsReserved = State;
     }
 
-    public Boolean GetHasPain() {
+    public Boolean GetHasPain()
+    {
         return this.HasPain;
     }
 
     /// <summary>
     /// @param boolean
     /// </summary>
-    public void SetHasPain(Boolean State) {
+    public void SetHasPain(Boolean State)
+    {
         this.HasPain = State;
     }
 
-    public Boolean GetHasEau() {
+    public Boolean GetHasEau()
+    {
         return HasEau;
     }
 
     /// <summary>
     /// @param boolean
     /// </summary>
-    public void SetHasEau(Boolean State) {
+    public void SetHasEau(Boolean State)
+    {
         this.HasEau = State;
     }
 
-    
-    public String[] GetPlats() {
+
+    public String[] GetPlats()
+    {
         return this.Plats;
     }
 
     /// <summary>
     /// @param Plats
     /// </summary>
-    public void SetPlats(String[] Plats) {
+    public void SetPlats(String[] Plats)
+    {
         this.Plats = Plats;
     }
 

@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public sealed class CommisSalle : PersonnelCuisine {
+public sealed class CommisSalle : PersonnelCuisine
+{
 
-    private CommisSalle(String Nom = "NOM", String Prenom = "PRENOM") : base(Nom, Prenom) {
+    private CommisSalle(String Nom = "NOM", String Prenom = "PRENOM") : base(Nom, Prenom)
+    {
     }
 
     private static CommisSalle instance = null;
@@ -30,31 +32,27 @@ public sealed class CommisSalle : PersonnelCuisine {
 
 
     /// <summary>
-    /// Le commis debarasse
-    /// </summary>
-
-    public void Debarasse(Table table) {
-    }
-
-    /// <summary>
     /// Le commis amene l'eau
     /// </summary>
-    
-    public void AmenerEau(Table table) {
+
+    public void AmenerEau(Table table)
+    {
     }
 
     /// <summary>
     /// Le commis ammene du pain
     /// </summary>
 
-    public void AmenerPain(Table table) {
+    public void AmenerPain(Table table)
+    {
     }
 
     /// <summary>
     /// Le commis redresse la table
     /// </summary>
 
-    public void DresserTable(Table table) {
+    public void DresserTable(Table table)
+    {
         //check si table debarrassé?
     }
 

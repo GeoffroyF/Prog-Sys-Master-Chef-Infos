@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public sealed class MaitreHotel : PersonnelCuisine {
+public sealed class MaitreHotel : PersonnelCuisine
+{
 
     //Cette implementation de singleton n'est pas valable sur plusieurs thread /!\
-    private MaitreHotel(String Nom = "NOM", String Prenom = "PRENOM") : base (Nom, Prenom) {
+    private MaitreHotel(String Nom = "NOM", String Prenom = "PRENOM") : base(Nom, Prenom)
+    {
     }
 
     private static MaitreHotel instance = null;
@@ -23,7 +25,7 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
     public static MaitreHotel GetInstance(String Nom = null, String Prenom = null)
     {
-        if(MaitreHotel.instance == null)
+        if (MaitreHotel.instance == null)
         {
             MaitreHotel.instance = new MaitreHotel(Nom, Prenom);
 
@@ -37,20 +39,22 @@ public sealed class MaitreHotel : PersonnelCuisine {
     /// Le MH defini la table qui sera attribue aux clients et appelle le Chef de rang pour qu'il amene les clients a la table
     /// </summary>
 
-    public void AttribueTable(Salle Salle,Clients Clients, Reservation TableReserve) {
+    public Table AttribueTable(Salle Salle, Clients Clients, Boolean AReserve)
+    {
         //defini la table (si pas de reservation) 
-        // si resa (rajouter un if) Table_Attribue = TableReserve.Table
+        // si resa (rajouter un if) Table_Attribue = TableReserve.Table   << !!
 
-        Carre CarreTemp=null;
-        Rang Rangtemp=null;
-        Table Table_attribue=null;
-        ChefRang CR_Table=null;
+        Carre CarreTemp = null;
+        Rang Rangtemp = null;
+        Table Table_attribue = null;
+        ChefRang CR_Table = null;
         Boolean Table_vide = false;
 
         int Carre = 1;
 
         //balaye les differents rang
-
+        //if (TableReserve == false)
+        //{
         while (Table_vide == false)
         {
 
@@ -87,20 +91,23 @@ public sealed class MaitreHotel : PersonnelCuisine {
 
             foreach (Table TBLE in Rangtemp.GetListeTables())
             {
-                if (TBLE.GetNombrePersonnes() == 0)
+                if ((TBLE.GetNombrePersonnes() == 0) && (Clients.GetNBClients() <= TBLE.GetNombreChaises()))
                 {
                     Table_vide = true;
                     Table_attribue = TBLE;
                     break;
                 }
             }
-            Carre ++;
+            Carre++;
         }
+        //}
 
         //Demander au CR concerné 
         CR_Table = Rangtemp.GetChefRang();
 
         CR_Table.PlaceClient(Table_attribue, Clients);
+
+        return Table_attribue;
 
     }
 

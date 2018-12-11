@@ -41,8 +41,8 @@ namespace WinForm
 
         private int Chiffre;
 
-
         private String[] CMD;
+
         private Clients Groupe_test;
         private Table Table_test;
 
@@ -120,7 +120,7 @@ namespace WinForm
             //
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void commencer(object sender, EventArgs e)
         {
             timer2.Start();
 
@@ -148,7 +148,7 @@ namespace WinForm
 
     
 
-        private void Arreter_Click(object sender, EventArgs e)
+        private void  Arreter_Click(object sender, EventArgs e)
         {
             timer2.Stop();
         }
@@ -171,10 +171,7 @@ namespace WinForm
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -227,7 +224,7 @@ namespace WinForm
             timer2.Interval = trackBar2.Value;
         }
 
-        /*private void button1_Click(object sender, EventArgs e)
+        private void ArriveCli_Click(object sender, EventArgs e)
         {
             //Instanciation Groupe Clients
             CMD = new String[2];
@@ -237,21 +234,43 @@ namespace WinForm
 
             //Acceuill, Attribution, placement clients & prise de commande
             //Apport eau et pains
+
+            //deplacer groupe cli vers MH
+            this.ClientIMG.Location = new Point(111,360);
+
+
             Table_test = MH.AttribueTable(Salle, Groupe_test, false);
+
+            //Deplacer groupe cli vers table concerne
+            this.ClientIMG.Location = new Point(304, 482);
+
+            //MAJ indicateur table concerne
+
+            this.NBpers_Tab1.Text = Groupe_test.GetNBClients().ToString();
+            //NB clients
+            this.PainEau_Tab1.ForeColor = System.Drawing.Color.Green;
+
+            this.button2.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        
+        private void Plat_pret_Click(object sender, EventArgs e)
         {
             //Service 
 
+
             //SR_1.AmenerSale();
+
             Groupe_test.SetServi(true);
+            this.ClientMnge_Tab_1.Text = "Servi";
+            this.ClientMnge_Tab_1.ForeColor = System.Drawing.Color.Green;
 
             //demmarrer un timer en fn humeur
-
+            //Barre de progression ?
             //lorsque fin timer
 
             //SR_1.Debarrasse (Table)
-        }*/
+        }
     }
 }
