@@ -39,8 +39,6 @@
             this.Minutes = new System.Windows.Forms.TextBox();
             this.Jour = new System.Windows.Forms.TextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Ajouter = new System.Windows.Forms.Button();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -58,7 +56,7 @@
             // 
             // Commencer
             // 
-            this.Commencer.Location = new System.Drawing.Point(88, 10);
+            this.Commencer.Location = new System.Drawing.Point(71, 28);
             this.Commencer.Name = "Commencer";
             this.Commencer.Size = new System.Drawing.Size(75, 23);
             this.Commencer.TabIndex = 1;
@@ -68,7 +66,7 @@
             // 
             // Arreter
             // 
-            this.Arreter.Location = new System.Drawing.Point(183, 10);
+            this.Arreter.Location = new System.Drawing.Point(169, 28);
             this.Arreter.Name = "Arreter";
             this.Arreter.Size = new System.Drawing.Size(75, 23);
             this.Arreter.TabIndex = 2;
@@ -132,33 +130,17 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(1434, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // Ajouter
-            // 
-            this.Ajouter.Location = new System.Drawing.Point(1328, 31);
-            this.Ajouter.Name = "Ajouter";
-            this.Ajouter.Size = new System.Drawing.Size(75, 23);
-            this.Ajouter.TabIndex = 10;
-            this.Ajouter.Text = "Ajouter";
-            this.Ajouter.UseVisualStyleBackColor = true;
-            this.Ajouter.Click += new System.EventHandler(this.Ajouter_Click);
-            // 
             // trackBar2
             // 
-            this.trackBar2.LargeChange = 1;
+            this.trackBar2.LargeChange = 10;
             this.trackBar2.Location = new System.Drawing.Point(301, 36);
-            this.trackBar2.Maximum = 4;
+            this.trackBar2.Maximum = 1000;
             this.trackBar2.Minimum = 1;
             this.trackBar2.Name = "trackBar2";
+            this.trackBar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.trackBar2.Size = new System.Drawing.Size(94, 45);
-            this.trackBar2.TabIndex = 11;
-            this.trackBar2.Value = 1;
+            this.trackBar2.TabIndex = 8;
+            this.trackBar2.Value = 1000;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // ChefMaster
@@ -167,8 +149,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1587, 794);
             this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.Ajouter);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Jour);
             this.Controls.Add(this.Minutes);
             this.Controls.Add(this.Seconde);
@@ -212,8 +192,6 @@
         private System.Windows.Forms.TextBox Minutes;
         private System.Windows.Forms.TextBox Jour;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button Ajouter;
         private System.Windows.Forms.TrackBar trackBar2;
     }
 }

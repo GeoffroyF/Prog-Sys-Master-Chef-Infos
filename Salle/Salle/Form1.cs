@@ -75,34 +75,34 @@ namespace Salle
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            int secondInt = Convert.ToInt32(Seconde.Text);
-            if (secondInt < 59)
+            int IntSeconde = Convert.ToInt32(Seconde.Text);
+            if (IntSeconde < 59)
             {
-                Seconde.Text = Convert.ToString(secondInt + 1);
+                Seconde.Text = Convert.ToString(IntSeconde + 1);
             }
             else
             {
                 Seconde.Text = "0";
-                int minuteInt = Convert.ToInt32(Minutes.Text);
-                if (minuteInt < 59)
+                int IntMinutes = Convert.ToInt32(Minutes.Text);
+                if (IntMinutes < 59)
                 {
-                    Minutes.Text = Convert.ToString(minuteInt + 1);
+                    Minutes.Text = Convert.ToString(IntMinutes + 1);
                 }
                 else
                 {
                     Minutes.Text = "0";
-                    int hourInt = Convert.ToInt32(Heures.Text);
-                    if (hourInt < 23)
+                    int IntHeures = Convert.ToInt32(Heures.Text);
+                    if (IntHeures < 23)
                     {
-                        Heures.Text = Convert.ToString(hourInt + 1);
+                        Heures.Text = Convert.ToString(IntHeures + 1);
                     }
                     else
                     {
                         Heures.Text = "0";
-                        int dayInt = Convert.ToInt32(Jour.Text);
-                        if (dayInt < 7)
+                        int IntJour = Convert.ToInt32(Jour.Text);
+                        if (IntJour < 7)
                         {
-                            Jour.Text = Convert.ToString(dayInt + 1);
+                            Jour.Text = Convert.ToString(IntJour + 1);
                         }
                         else
                         {
