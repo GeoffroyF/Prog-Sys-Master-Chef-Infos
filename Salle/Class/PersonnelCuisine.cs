@@ -19,7 +19,7 @@ public class PersonnelCuisine {
     private Boolean IsBusy;
 
     /// <summary>
-    /// 
+    /// Gets nom attribute
     /// </summary>
     
     public String GetNom() {
@@ -27,7 +27,7 @@ public class PersonnelCuisine {
     }
 
     /// <summary>
-    /// 
+    /// Gets Prenom attribute
     /// </summary>
     
     public String GetPrenom() {
@@ -35,7 +35,7 @@ public class PersonnelCuisine {
     }
 
     /// <summary>
-    /// 
+    /// Gets IsBusy attribute
     /// </summary>
  
     public Boolean GetIsBusy() {
@@ -43,6 +43,7 @@ public class PersonnelCuisine {
     }
 
     /// <summary>
+    /// Sets IsBusy attribut
     /// @param Boolean
     /// </summary>
     

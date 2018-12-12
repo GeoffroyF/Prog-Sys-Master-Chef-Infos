@@ -16,18 +16,17 @@ public class Reservation {
 
     private Boolean Reserved;
 
-    private Table Table;
     //L'objet Reservation compose une Table, on l'accede par cette table
+    private Table Table;
 
     //True = Service du Midi
     //false = Service du soir
-
     private Boolean Matin;
 
     private DateTime Date;
 
     /// <summary>
-    /// Renvoie 
+    /// Gets Reserved attribute
     /// </summary>
     
     public Boolean GetReserved() {
@@ -36,7 +35,7 @@ public class Reservation {
 
     /// <summary>
     /// @param boolean
-    /// Change l'etat de la reservation
+    /// Sets Reserved attribute
     /// Check si la table est deja reserve / Change son état egalement
     /// </summary>
     
@@ -45,7 +44,7 @@ public class Reservation {
     }
 
     /// <summary>
-    /// 
+    /// Gets Table attribute
     /// </summary>
     
     public Table GetTable() {
@@ -54,6 +53,7 @@ public class Reservation {
     }
 
     /// <summary>
+    /// Sets Table attribute
     /// @param Table
     /// </summary>
     public void SetTable(Table Table) {
@@ -61,7 +61,7 @@ public class Reservation {
     }
 
     /// <summary>
-    /// 
+    /// Gets Matin attribute
     /// </summary>
     
     public Boolean GetMatin() {
@@ -69,6 +69,7 @@ public class Reservation {
     }
 
     /// <summary>
+    /// Sets Matin attribute
     /// @param boolean
     /// </summary>
     

@@ -13,13 +13,8 @@ public sealed class CommisSalle : PersonnelCuisine
 
     private static CommisSalle instance = null;
 
-
-    //private String Nom;
-
-    //private String Prenom;
-
     /// <summary>
-    /// Methode d'instanciation unique
+    /// Unique Instance method
     /// </summary>
     public static CommisSalle GetInstance(String Nom = null, String Prenom = null)
     {
@@ -30,30 +25,34 @@ public sealed class CommisSalle : PersonnelCuisine
         return CommisSalle.instance;
     }
 
-
     /// <summary>
-    /// Le commis amene l'eau
+    /// The Commis brings water
     /// </summary>
-
     public void AmenerEau(Table table)
     {
+        table.SetHasEau(true);
+        //updates Water bottle stock < To do
+        // > create Get & Set methods in Salle & use it with a Salle attribute
     }
 
     /// <summary>
-    /// Le commis ammene du pain
+    /// The commis brings bread
     /// </summary>
-
     public void AmenerPain(Table table)
     {
+        table.SetHasPain(true);
+        //updates bread stock < To do
+        // > create Get & Set methods in Salle & use it with a Salle attribute
     }
 
     /// <summary>
     /// Le commis redresse la table
     /// </summary>
-
     public void DresserTable(Table table)
     {
-        //check si table debarrassé?
+        //To do :
+        //check if table is "debarrassé"
+        //brings new 'nappe' & 'couvert'
     }
 
 }

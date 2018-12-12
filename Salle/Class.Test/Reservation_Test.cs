@@ -10,7 +10,7 @@ namespace Class.Test
         public void Test_GetReserved()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4,1);
             //une table 
             Boolean Expected = false;          
             Reservation Reservation = new Reservation(Expected, Table, false);
@@ -26,7 +26,7 @@ namespace Class.Test
         public void Test_SetReserved()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4,1);
             Reservation Reservation = new Reservation(false, Table, false);
             Boolean Expected = true;
             //Action
@@ -41,7 +41,7 @@ namespace Class.Test
         public void Test_GetTable()
         {
             //Arrange
-            Table Expected_Table = new Table(4, 4);
+            Table Expected_Table = new Table(4, 4,1);
             //une table      
             Reservation Reservation = new Reservation(false, Expected_Table, false);
 
@@ -56,9 +56,9 @@ namespace Class.Test
         public void Test_SetTable()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4,1);
             Reservation Reservation = new Reservation(false, Table, false);
-            Table Expected_Table = new Table(6,5);
+            Table Expected_Table = new Table(6,5,1);
 
             //Action
             Reservation.SetTable(Expected_Table);
@@ -71,7 +71,7 @@ namespace Class.Test
         public void Test_GetMatin()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4,1);
             //une table 
             Boolean Expected_Matin = false;
             Reservation Reservation = new Reservation(false, Table, Expected_Matin);
@@ -87,7 +87,7 @@ namespace Class.Test
         public void Test_SetMatin()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4,1);
             Reservation Reservation = new Reservation(false, Table, false);
             Boolean Expected = true;
             //Action

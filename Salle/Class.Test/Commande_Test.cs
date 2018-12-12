@@ -10,7 +10,7 @@ namespace Class.Test
         public void Test_GetTable()
         {
             //Arrange
-            Table Expected_Table = new Table(4, 4);
+            Table Expected_Table = new Table(4, 4, 1);
             Commande CMD = new Commande(Expected_Table, "Pates");
 
             //Action
@@ -26,7 +26,7 @@ namespace Class.Test
         public void Test_GetPlats()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4, 1);
             String Expected_Plat = "Pates";
             Commande CMD = new Commande(Table, Expected_Plat);
 
@@ -41,7 +41,7 @@ namespace Class.Test
         public void Test_SetPlats()
         {
             //Arrange
-            Table Table = new Table(4, 4);
+            Table Table = new Table(4, 4, 1);
             String Expected_Plat = "Pates";
             Commande CMD = new Commande(Table, "Pizza");
 

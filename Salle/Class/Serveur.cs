@@ -12,33 +12,37 @@ public class Serveur : PersonnelCuisine
         Rang = null;
     }
 
-    //private String Nom;
-
-    //private String Prenom;
-
     private Rang Rang;
 
+    /// <summary>
+    /// Sets Rang attribute
+    /// </summary>
+    /// <param name="Rang"></param>
     public void SetRang(Rang Rang)
     {
         this.Rang = Rang;
     }
 
+    /// <summary>
+    /// Gets Rang attribute
+    /// </summary>
+    /// <returns></returns>
     public Rang GetRang()
     {
         return this.Rang;
     }
 
     /// <summary>
-    /// Le Serveur debarasse
+    /// the Serveur brings the dirty dishes to the Presentoire Sale
     /// </summary>
 
     public void Debarasse(Table table)
     {
         //Transmet aux presentoire salle un nb couvert proportionels a Table.NBpersonnes
-
     }
 
     /// <summary>
+    /// The Serveur brings desert
     /// @param Commande
     /// </summary>
     public void AmenerSucre(Commande Commande)
@@ -47,6 +51,7 @@ public class Serveur : PersonnelCuisine
     }
 
     /// <summary>
+    /// Serveur brings plate
     /// @param Commande
     /// </summary>
     public void AmenerSale(Commande Commande)
@@ -58,10 +63,13 @@ public class Serveur : PersonnelCuisine
     }
 
     /// <summary>
+    /// Serveur
     /// @param Commande
     /// </summary>
     public int Addition()
     {
+        //Depending on the command, method returns the amount to be paid
+        //Here it alway return 10, to be modified /!\
         return 10;
     }
 

@@ -17,11 +17,12 @@ using System.Text;
         this.MaitreHotel = MaitreHotel;
         this.Commis = Commis;
         this.PresentoireSalle = PresentoireSalle;
+        this.Eau = 40;
+        this.Pains = 40;
     }
 
 
     private static Salle instance = null;
-
 
     private Carre CarreUn;
 
@@ -33,7 +34,9 @@ using System.Text;
 
     public DateTime Date;
 
-    
+    private int Pains;
+
+    private int Eau;
 
     private PresentoireSalle PresentoireSalle;
 

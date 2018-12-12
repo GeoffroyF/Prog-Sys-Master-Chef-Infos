@@ -7,7 +7,7 @@ using System.Text;
 public class Rang {
 
     public Rang(Serveur Serveur, ChefRang ChefRang, Table[] ListeTables) {
-        //initialisations par défauts
+        //default initialisations
         this.Serveur = Serveur;
         this.ChefRang = ChefRang;
         this.ListeTables = ListeTables;
@@ -22,7 +22,7 @@ public class Rang {
     private Table[] ListeTables;
 
     /// <summary>
-    /// Renvoie le Serveur du rang, de type Serveur
+    /// Gets Serveur attribute
     /// </summary>
 
     public Serveur GetServeur() {
@@ -30,7 +30,7 @@ public class Rang {
     }
 
     /// <summary>
-    /// Renvoie le Chef de Rang du Rang, de type ChefRang
+    /// Gets ChefRang attribute
     /// </summary>
 
     public ChefRang GetChefRang() {
@@ -38,7 +38,7 @@ public class Rang {
     }
 
     /// <summary>
-    /// Renvoie la liste des tables du rang
+    /// Gets ListeTable attribute
     /// </summary>
 
     public Table[] GetListeTables() {

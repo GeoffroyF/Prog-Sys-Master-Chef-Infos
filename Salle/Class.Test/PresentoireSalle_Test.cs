@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace Class.Test
 {
-    [TestClass]
+    /*[TestClass]
     class PresentoireSalle_Test
     {
         public PresentoireSalle_Test()
-        {
-            
+        {          
         }
-
-       
-    }
+    }*/
 }

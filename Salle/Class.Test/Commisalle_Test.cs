@@ -13,25 +13,40 @@ namespace Class.Test
             Assert.AreEqual(CommisSalle.GetInstance("",""), CommisSalle.GetInstance());
                 
         }
-        /*
-        [TestMethod]
-        public void Test_Debarasse()
-        { 
-            //
-        }
+
+
 
         [TestMethod]
         public void Test_AmenerEau()
         {
-            //
+            //Arrange
+            Table table_test = new Table(4, 1, 1);
+            Boolean Expected_Eau = true;
+            CommisSalle commis = CommisSalle.GetInstance("", "");
+
+            //Action
+            commis.AmenerEau(table_test);
+
+            //Assert
+            Assert.AreEqual(Expected_Eau, table_test.GetHasEau());
         }
 
         [TestMethod]
         public void Test_AmenerPain()
         {
-            //
+            //Arrange
+            Table table_test = new Table(4, 1, 1);
+            Boolean Expected_Pain = true;
+            CommisSalle commis = CommisSalle.GetInstance("", "");
+
+            //Action
+            commis.AmenerPain(table_test);
+
+            //Assert
+            Assert.AreEqual(Expected_Pain, table_test.GetHasPain());
         }
 
+        /*
         [TestMethod]
         public void Test_DresserTable()
         {
