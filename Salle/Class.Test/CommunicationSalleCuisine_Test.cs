@@ -9,7 +9,6 @@ namespace Class.Test
 {
     [TestClass]
     class CommunicationSalleCuisine_Test
-    {
-        
+    {      
     }
 }

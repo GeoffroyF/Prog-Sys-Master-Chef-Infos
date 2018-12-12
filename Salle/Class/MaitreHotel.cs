@@ -6,7 +6,6 @@ using System.Text;
 
 public sealed class MaitreHotel : PersonnelCuisine
 {
-
     //Cette implementation de singleton n'est pas valable sur plusieurs thread /!\
     private MaitreHotel(String Nom = "NOM", String Prenom = "PRENOM") : base(Nom, Prenom)
     {
@@ -46,7 +45,7 @@ public sealed class MaitreHotel : PersonnelCuisine
         ChefRang CR_Table = null;
         Boolean Table_vide = false;
 
-        int Carre = 1;
+        int Rang = 1;
 
         //balaye les differents rang
         //if (TableReserve == false)
@@ -54,7 +53,7 @@ public sealed class MaitreHotel : PersonnelCuisine
         while (Table_vide == false)
         {
 
-            switch (Carre)
+            switch (Rang)
             {
                 case 1:
                     //Rang UN
@@ -94,7 +93,7 @@ public sealed class MaitreHotel : PersonnelCuisine
                     break;
                 }
             }
-            Carre++;
+            Rang++;
         }
         //}
 
