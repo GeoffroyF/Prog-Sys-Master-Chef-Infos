@@ -9,7 +9,19 @@ namespace Class.Test
         [TestMethod]
         public void Test_PlaceClient()
         {
-            //
+            //Arrange
+            Table table= new Table(2,2,1);
+            String[] CMD = { "aa", "aa" };
+            int Expected_NBClients = 4;
+            Clients Clients = new Clients(Expected_NBClients, false, "presse", CMD);
+
+            ChefRang Lucas = new ChefRang("Dupont", "Lucas");
+
+            //Action
+            Lucas.PlaceClient(table, Clients);
+
+            //Assert
+            Assert.AreEqual(Expected_NBClients, table.GetNombrePersonnes());
         }
 
         [TestMethod]
@@ -55,7 +67,7 @@ namespace Class.Test
         [TestMethod]
         public void Test_PrendCommande()
         {
-            //
+            //Depends on the communication of the Cuisine
         }
 
 

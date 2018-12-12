@@ -12,31 +12,27 @@ public class ChefRang : PersonnelCuisine
         Rang = null;
     }
 
-    //private String Nom;
-
-    //private String Prenom;
-
     private Rang Rang;
 
     /// <summary>
-    /// Le CR place les clients
+    /// The CR bring the clients to the specified table
     /// 
     /// @param Table
     /// </summary>
     public void PlaceClient(Table Table, Clients Clients)
     {
-        //MAJ table
+        //Updates table
         Table.SetNombrePersonnes(Clients.GetNBClients());
         Table.SetClients(Clients);
 
-        //MAJ clients
-        //APPELLE PREND commande
+        //Updates clients
+        //In the logic of the scenario, the method calls PrendCommande
         this.PrendCommande(Table);
 
     }
 
     /// <summary>
-    /// 
+    /// Sets the Rang attribute
     /// </summary>
     public void SetRang(Rang Rang)
     {
@@ -44,7 +40,7 @@ public class ChefRang : PersonnelCuisine
     }
 
     /// <summary>
-    /// 
+    /// Gets the Rang attribute
     /// </summary>
 
     public Rang GetRang()
@@ -64,9 +60,10 @@ public class ChefRang : PersonnelCuisine
 
         Cli = Table.GetClients();
         Commande = Cli.GetCommandes();
-
         //recup commande
-        //la transmet en cuisine
+
+        //la transmetre en cuisine  < To Do
+
         //Apporte pain et eau
         if (Table.GetHasEau() == false)
         {
@@ -78,8 +75,7 @@ public class ChefRang : PersonnelCuisine
             Table.SetHasPain(true);
         }
 
-
-
+        //Update the Water Bottle & Bread stock < To Do
     }
 
 }

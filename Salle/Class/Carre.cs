@@ -9,7 +9,6 @@ public class Carre {
     public Carre(Rang RangUn, Rang RangDeux) {
         this.RangUn = RangUn;
         this.RangDeux = RangDeux;
-        //initialisations par defauts
     }
 
     private Rang RangUn;
@@ -18,7 +17,7 @@ public class Carre {
 
 
     /// <summary>
-    /// Renvoie l'attribut RangUn de type Rang
+    /// Sets the RangUn attribute
     /// </summary>
 
     public Rang GetRangUn() {
@@ -26,7 +25,7 @@ public class Carre {
     }
 
     /// <summary>
-    /// Renvoie l'attribut RangDeux de type Rang
+    /// Gets the RangDeux attribute
     /// </summary>
 
     public Rang GetRangDeux() {
